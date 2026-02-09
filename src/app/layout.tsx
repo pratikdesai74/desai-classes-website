@@ -88,7 +88,7 @@ const jsonLd = {
   description:
     "Top-rated coaching institute for 11th & 12th Science & Commerce in Pune since 1990.",
   url: "https://desaiclasses.com",
-  telephone: "+91-20-XXXXXXXX",
+  telephone: "+919822598294",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Kakade Plaza, 2nd Floor, NDA Road, Opposite Kakade City",
