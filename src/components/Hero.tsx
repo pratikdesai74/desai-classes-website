@@ -1,10 +1,22 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center hero-gradient overflow-hidden">
+      {/* Background image overlay */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/class-5.jpg"
+          alt="Desai Classes classroom"
+          fill
+          className="object-cover opacity-10"
+          priority
+        />
+      </div>
+
       {/* Animated background shapes */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -96,7 +108,7 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Right side - decorative card */}
+          {/* Right side - actual images */}
           <motion.div
             initial={{ opacity: 0, x: 60 }}
             animate={{ opacity: 1, x: 0 }}
@@ -104,34 +116,60 @@ export default function Hero() {
             className="hidden lg:block"
           >
             <div className="relative">
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8">
-                <div className="grid grid-cols-2 gap-4">
-                  {[
-                    { icon: "🎓", title: "Expert Faculty", desc: "Experienced & dedicated teachers" },
-                    { icon: "📊", title: "Smart Boards", desc: "Modern teaching methods" },
-                    { icon: "📚", title: "Study Material", desc: "Well-organized resources" },
-                    { icon: "🏆", title: "Proven Results", desc: "Consistent top scores" },
-                  ].map((item, i) => (
-                    <motion.div
-                      key={item.title}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: 0.5 + i * 0.1 }}
-                      className="bg-white/5 rounded-2xl p-5 border border-white/10 hover:border-[#d4a843]/30 transition-all"
-                    >
-                      <div className="text-3xl mb-3">{item.icon}</div>
-                      <h3 className="text-white font-semibold text-sm">{item.title}</h3>
-                      <p className="text-white/50 text-xs mt-1">{item.desc}</p>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
+              {/* Main signboard image */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.4 }}
+                className="rounded-3xl overflow-hidden shadow-2xl border-2 border-white/10"
+              >
+                <Image
+                  src="/images/class-3.jpg"
+                  alt="Desai Classes signboard - XI XII Science coaching established 1990"
+                  width={600}
+                  height={340}
+                  className="w-full object-cover"
+                  priority
+                />
+              </motion.div>
+
+              {/* Overlapping classroom image */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+                className="absolute -bottom-12 -left-8 w-56 rounded-2xl overflow-hidden shadow-2xl border-4 border-[#0f2440]"
+              >
+                <Image
+                  src="/images/class-4.jpg"
+                  alt="Spacious classroom at Desai Classes Pune"
+                  width={224}
+                  height={168}
+                  className="w-full object-cover"
+                />
+              </motion.div>
+
+              {/* Small classroom image */}
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7 }}
+                className="absolute -top-6 -right-4 w-40 rounded-2xl overflow-hidden shadow-2xl border-4 border-[#0f2440]"
+              >
+                <Image
+                  src="/images/class-1.jpg"
+                  alt="Well-furnished classroom at Desai Classes"
+                  width={160}
+                  height={120}
+                  className="w-full object-cover"
+                />
+              </motion.div>
 
               {/* Floating badge */}
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -bottom-6 -left-6 bg-[#d4a843] text-[#1a3a5c] rounded-2xl px-6 py-3 font-bold shadow-xl"
+                className="absolute -bottom-6 right-4 bg-[#d4a843] text-[#1a3a5c] rounded-2xl px-6 py-3 font-bold shadow-xl"
               >
                 <div className="text-2xl">Est. 1990</div>
                 <div className="text-xs font-medium opacity-80">Trusted for 35+ years</div>
