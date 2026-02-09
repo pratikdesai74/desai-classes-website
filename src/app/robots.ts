@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://desaiclasses.in/sitemap.xml",
+    sitemap: "https://desaiclasses.com/sitemap.xml",
   };
 }

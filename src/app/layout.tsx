@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://desaiclasses.in"),
+  metadataBase: new URL("https://desaiclasses.com"),
   title: "Desai Classes Pune | Best 11th & 12th Science & Commerce Coaching Since 1990",
   description:
     "Desai Classes Pune - Top-rated coaching institute for 11th & 12th Science & Commerce in Karve Nagar since 1990. Expert faculty, AC classrooms, smartboards, CET/JEE/NEET preparation. 4.8/5 rating, 35+ years of excellence. Enroll now!",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: "Desai Classes Pune | Best 11th & 12th Coaching Since 1990",
     description:
       "Top-rated coaching institute for 11th & 12th Science & Commerce in Karve Nagar, Pune. 35+ years of excellence. Expert faculty, modern facilities.",
-    url: "https://desaiclasses.in",
+    url: "https://desaiclasses.com",
     siteName: "Desai Classes",
     locale: "en_IN",
     type: "website",
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://desaiclasses.in",
+    canonical: "https://desaiclasses.com",
   },
 };
 
@@ -87,7 +87,7 @@ const jsonLd = {
   name: "Desai Classes",
   description:
     "Top-rated coaching institute for 11th & 12th Science & Commerce in Pune since 1990.",
-  url: "https://desaiclasses.in",
+  url: "https://desaiclasses.com",
   telephone: "+91-20-XXXXXXXX",
   address: {
     "@type": "PostalAddress",
