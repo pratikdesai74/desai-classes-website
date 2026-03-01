@@ -7,99 +7,102 @@ import Image from "next/image";
 const images = [
   {
     src: "/images/class-3.jpg",
-    alt: "Desai Classes signboard - XI XII Science coaching since 1990",
-    caption: "Our Institute - Established 1990",
-    span: "lg:col-span-2",
+    alt: "Desai Classes institute signboard — established 1990",
+    caption: "Our Institute — Est. 1990",
+    span: "lg:col-span-2 lg:row-span-2",
+    aspect: "aspect-[16/10]",
+  },
+  {
+    src: "/images/classroom-main.jpg",
+    alt: "Desai Classes main classroom with modern facilities",
+    caption: "Modern Classrooms",
+    span: "",
+    aspect: "aspect-[4/3]",
   },
   {
     src: "/images/class-4.jpg",
-    alt: "Spacious classroom at Desai Classes Pune with blackboard and seating",
-    caption: "Spacious Classrooms",
+    alt: "Spacious classroom at Desai Classes Pune",
+    caption: "Spacious Learning Spaces",
     span: "",
+    aspect: "aspect-[4/3]",
   },
   {
     src: "/images/class-5.jpg",
-    alt: "AC classroom at Desai Classes with modern facilities",
-    caption: "Air-Conditioned Classrooms",
+    alt: "Air-conditioned classroom at Desai Classes",
+    caption: "AC-Equipped Rooms",
     span: "",
+    aspect: "aspect-[4/3]",
   },
   {
     src: "/images/class-1.jpg",
-    alt: "Well-furnished classroom with desks at Desai Classes Karve Nagar",
+    alt: "Well-furnished classroom with student desks",
     caption: "Comfortable Study Environment",
-    span: "lg:col-span-2",
+    span: "",
+    aspect: "aspect-[4/3]",
   },
 ];
 
 export default function Gallery() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true, margin: "-80px" });
   const [lightbox, setLightbox] = useState<number | null>(null);
 
   return (
     <>
-      <section id="gallery" className="py-20 lg:py-28 bg-[#f8f9fc]" ref={ref}>
+      <section id="gallery" className="py-20 lg:py-28 bg-[#0B1829] grid-pattern overflow-hidden" ref={ref}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 28 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            className="text-center max-w-2xl mx-auto mb-16"
+            className="text-center max-w-2xl mx-auto mb-14"
           >
-            <span className="text-[#d4a843] font-semibold text-sm uppercase tracking-widest">
+            <span className="inline-block text-[#F97316] font-bold text-xs uppercase tracking-[0.2em] mb-3">
               Our Campus
             </span>
-            <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1a3a5c]">
-              Inside <span className="text-[#d4a843]">Desai Classes</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">
+              Inside <span className="gradient-text-gold">Desai Classes</span>
             </h2>
-            <p className="mt-4 text-gray-600 text-lg">
-              Take a look at our well-equipped classrooms and learning
-              environment.
+            <p className="mt-4 text-white/50 text-lg">
+              Modern, air-conditioned classrooms built for focused learning and top performance.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {/* Masonry-style grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 gap-4">
             {images.map((img, i) => (
               <motion.div
                 key={img.src}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ delay: i * 0.1 }}
-                className={`relative group cursor-pointer overflow-hidden rounded-2xl ${img.span}`}
+                className={`relative group cursor-pointer overflow-hidden rounded-2xl ${img.span} ${img.aspect}`}
                 onClick={() => setLightbox(i)}
               >
-                <div className="relative aspect-[16/10] w-full">
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                  />
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B1829]/85 via-[#0B1829]/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
+
+                {/* Caption */}
+                <div className="absolute inset-x-0 bottom-0 p-5 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <p className="text-white font-bold text-base drop-shadow">{img.caption}</p>
                 </div>
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1a3a5c]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <div className="p-5">
-                    <p className="text-white font-semibold text-lg">
-                      {img.caption}
-                    </p>
-                  </div>
-                </div>
+
                 {/* Zoom icon */}
-                <div className="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <svg
-                    className="w-5 h-5 text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
-                    />
+                <div className="absolute top-4 right-4 w-9 h-9 bg-white/15 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
                   </svg>
                 </div>
+
+                {/* Orange border on hover */}
+                <div className="absolute inset-0 rounded-2xl ring-0 group-hover:ring-2 ring-[#F97316]/60 transition-all duration-300" />
               </motion.div>
             ))}
           </div>
@@ -112,66 +115,58 @@ export default function Gallery() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4"
+          className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4"
           onClick={() => setLightbox(null)}
         >
           <button
             onClick={() => setLightbox(null)}
-            className="absolute top-6 right-6 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-colors"
-            aria-label="Close lightbox"
+            className="absolute top-5 right-5 w-11 h-11 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-colors"
+            aria-label="Close"
           >
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
 
-          {/* Prev / Next */}
           {lightbox > 0 && (
             <button
-              onClick={(e) => {
-                e.stopPropagation();
-                setLightbox(lightbox - 1);
-              }}
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-colors"
-              aria-label="Previous image"
+              onClick={(e) => { e.stopPropagation(); setLightbox(lightbox - 1); }}
+              className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-colors"
+              aria-label="Previous"
             >
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
               </svg>
             </button>
           )}
           {lightbox < images.length - 1 && (
             <button
-              onClick={(e) => {
-                e.stopPropagation();
-                setLightbox(lightbox + 1);
-              }}
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-colors"
-              aria-label="Next image"
+              onClick={(e) => { e.stopPropagation(); setLightbox(lightbox + 1); }}
+              className="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-colors"
+              aria-label="Next"
             >
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
               </svg>
             </button>
           )}
 
           <motion.div
             key={lightbox}
-            initial={{ scale: 0.9, opacity: 0 }}
+            initial={{ scale: 0.88, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className="relative max-w-4xl w-full max-h-[80vh]"
+            transition={{ duration: 0.2 }}
+            className="relative max-w-5xl w-full max-h-[85vh]"
             onClick={(e) => e.stopPropagation()}
           >
             <Image
               src={images[lightbox].src}
               alt={images[lightbox].alt}
               width={1200}
-              height={750}
-              className="rounded-xl object-contain w-full max-h-[80vh]"
+              height={800}
+              className="rounded-2xl object-contain w-full max-h-[85vh]"
             />
-            <p className="text-white text-center mt-4 font-medium text-lg">
-              {images[lightbox].caption}
-            </p>
+            <p className="text-white/80 text-center mt-4 font-semibold">{images[lightbox].caption}</p>
           </motion.div>
         </motion.div>
       )}

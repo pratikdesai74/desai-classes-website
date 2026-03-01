@@ -2,15 +2,15 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const navLinks = [
-  { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
   { name: "Courses", href: "#courses" },
-  { name: "Facilities", href: "#facilities" },
-  { name: "Gallery", href: "#gallery" },
+  { name: "Batches", href: "#batches" },
   { name: "Results", href: "#results" },
-  { name: "Testimonials", href: "#testimonials" },
+  { name: "Gallery", href: "#gallery" },
+  { name: "Reviews", href: "#testimonials" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -19,7 +19,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
+    const onScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -28,51 +28,50 @@ export default function Navbar() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-lg"
+          ? "bg-white/97 backdrop-blur-xl shadow-[0_2px_24px_rgba(11,24,41,0.1)] border-b border-gray-100"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="#home" className="flex items-center gap-3">
-            <div
-              className={`w-10 h-10 rounded-lg flex items-center justify-center font-bold text-lg ${
-                scrolled ? "bg-[#1a3a5c] text-white" : "bg-[#d4a843] text-[#1a3a5c]"
-              }`}
-            >
-              DC
+          {/* Logo */}
+          <a href="#home" className="flex items-center gap-3 group">
+            <div className="relative w-10 h-10 rounded-xl overflow-hidden flex-shrink-0 ring-2 ring-[#F59E0B]/40">
+              <Image
+                src="/images/logo.jpg"
+                alt="Desai Classes Logo"
+                fill
+                className="object-cover"
+                sizes="40px"
+              />
             </div>
-            <div>
-              <span
-                className={`text-xl font-bold ${
-                  scrolled ? "text-[#1a3a5c]" : "text-white"
-                }`}
-              >
+            <div className="leading-tight">
+              <span className={`block text-lg font-extrabold tracking-tight transition-colors ${
+                scrolled ? "text-[#0B1829]" : "text-white"
+              }`}>
                 Desai Classes
               </span>
-              <span
-                className={`block text-[10px] tracking-widest uppercase ${
-                  scrolled ? "text-[#d4a843]" : "text-[#e8c36a]"
-                }`}
-              >
-                Since 1990
+              <span className={`block text-[10px] tracking-[0.2em] uppercase font-semibold transition-colors ${
+                scrolled ? "text-[#F97316]" : "text-[#FCD34D]"
+              }`}>
+                Since 1990 · Karve Nagar, Pune
               </span>
             </div>
           </a>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-0.5">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                className={`px-3 py-2 rounded-lg text-sm font-medium transition-all ${
                   scrolled
-                    ? "text-[#1a3a5c] hover:bg-[#1a3a5c]/10"
-                    : "text-white/90 hover:text-white hover:bg-white/10"
+                    ? "text-[#374151] hover:text-[#0B1829] hover:bg-[#EEF4FF]"
+                    : "text-white/80 hover:text-white hover:bg-white/10"
                 }`}
               >
                 {link.name}
@@ -80,7 +79,7 @@ export default function Navbar() {
             ))}
             <a
               href="#contact"
-              className="ml-2 px-5 py-2 bg-[#d4a843] hover:bg-[#e8c36a] text-[#1a3a5c] font-semibold rounded-lg text-sm transition-colors"
+              className="ml-3 px-5 py-2.5 bg-[#F97316] hover:bg-[#EA6810] text-white font-bold rounded-xl text-sm transition-all shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 hover:-translate-y-0.5"
             >
               Enroll Now
             </a>
@@ -89,25 +88,22 @@ export default function Navbar() {
           {/* Mobile Toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2"
+            className="md:hidden p-2 rounded-lg"
             aria-label="Toggle menu"
           >
             <div className="space-y-1.5">
-              <span
-                className={`block w-6 h-0.5 transition-all ${
-                  scrolled ? "bg-[#1a3a5c]" : "bg-white"
-                } ${mobileOpen ? "rotate-45 translate-y-2" : ""}`}
-              />
-              <span
-                className={`block w-6 h-0.5 transition-all ${
-                  scrolled ? "bg-[#1a3a5c]" : "bg-white"
-                } ${mobileOpen ? "opacity-0" : ""}`}
-              />
-              <span
-                className={`block w-6 h-0.5 transition-all ${
-                  scrolled ? "bg-[#1a3a5c]" : "bg-white"
-                } ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`}
-              />
+              {[0, 1, 2].map((i) => (
+                <span
+                  key={i}
+                  className={`block w-6 h-0.5 rounded-full transition-all duration-300 ${
+                    scrolled ? "bg-[#0B1829]" : "bg-white"
+                  } ${
+                    i === 0 && mobileOpen ? "rotate-45 translate-y-2" :
+                    i === 1 && mobileOpen ? "opacity-0 scale-x-0" :
+                    i === 2 && mobileOpen ? "-rotate-45 -translate-y-2" : ""
+                  }`}
+                />
+              ))}
             </div>
           </button>
         </div>
@@ -120,7 +116,8 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white shadow-xl"
+            transition={{ duration: 0.25 }}
+            className="md:hidden bg-white border-t border-gray-100 shadow-xl"
           >
             <div className="px-4 py-4 space-y-1">
               {navLinks.map((link) => (
@@ -128,7 +125,7 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block px-4 py-3 rounded-lg text-[#1a3a5c] hover:bg-[#1a3a5c]/10 font-medium"
+                  className="flex items-center px-4 py-3 rounded-xl text-[#0B1829] hover:bg-[#EEF4FF] hover:text-[#1D3F74] font-medium transition-all"
                 >
                   {link.name}
                 </a>
@@ -136,9 +133,9 @@ export default function Navbar() {
               <a
                 href="#contact"
                 onClick={() => setMobileOpen(false)}
-                className="block text-center mt-3 px-5 py-3 bg-[#d4a843] text-[#1a3a5c] font-semibold rounded-lg"
+                className="block text-center mt-3 px-5 py-3.5 bg-[#F97316] text-white font-bold rounded-xl shadow-lg"
               >
-                Enroll Now
+                Enroll Now — Free Demo Class
               </a>
             </div>
           </motion.div>
