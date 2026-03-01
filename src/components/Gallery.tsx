@@ -31,7 +31,7 @@ export default function Gallery() {
             <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">
               Inside <span className="text-gold-gradient">Desai Classes</span>
             </h2>
-            <p className="mt-3 text-white/50 text-lg">
+            <p className="mt-3 text-white/80 text-lg">
               Modern, air-conditioned classrooms built for focused learning and top performance.
             </p>
           </motion.div>

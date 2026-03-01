@@ -22,10 +22,10 @@ function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: str
 }
 
 const stats = [
-  { number: 35,    suffix: "+", label: "Years of Excellence",     icon: "🏛️" },
-  { number: 10000, suffix: "+", label: "Students Mentored",       icon: "🎓" },
-  { number: 30,    suffix: "+", label: "IIT / NIT Selections",    icon: "🏆" },
-  { number: 210,   suffix: "+", label: "5-Star Google Reviews",   icon: "⭐" },
+  { number: 35,    suffix: "+", label: "Years of Excellence",   icon: "🏛️" },
+  { number: 10000, suffix: "+", label: "Students Mentored",     icon: "🎓" },
+  { number: 30,    suffix: "+", label: "IIT / NIT Selections",  icon: "🏆" },
+  { number: 210,   suffix: "+", label: "5-Star Google Reviews", icon: "⭐" },
 ];
 
 const featured = [
@@ -40,11 +40,11 @@ const featured = [
     name: "Pallavi Bharane", photo: "/images/topper-pallavi-bharne.jpg",
     exam: "MHT-CET",         score: "99.9 Percentile", sub: "Top Scorer",
     badge: "🥈 CET Topper",
-    badgeBg: "bg-white/15 text-white border border-white/20",
-    ring: "ring-white/50",
+    badgeBg: "bg-white/20 text-white border border-white/30",
+    ring: "ring-white/60",
   },
   {
-    name: "Vaishnavi Digole",photo: "/images/topper-vaishnavi-digole.jpg",
+    name: "Vaishnavi Digole", photo: "/images/topper-vaishnavi-digole.jpg",
     exam: "NEET",             score: "603 Marks",       sub: "Medical",
     badge: "🥉 NEET Star",
     badgeBg: "bg-[#2D2BB5] text-white",
@@ -53,22 +53,22 @@ const featured = [
 ];
 
 const scienceToppers = [
-  { name: "Ganesh More",      photo: "/images/topper-ganesh-more.jpg",      scores: "NEET: 587"              },
-  { name: "Kunal More",       photo: "/images/topper-kunal-mare.jpg",       scores: "MHT-CET: 99.28%"        },
-  { name: "Trupti Chaudhari", photo: "/images/topper-trupti-chaudhari.jpg", scores: "PCM: 97.61%"            },
-  { name: "Pranali Dongale",  photo: "/images/topper-pranali-dongale.jpg",  scores: "Maths 98 · Chem 94"     },
-  { name: "Kaveri Kande",     photo: "/images/topper-kaveri-kande.jpg",     scores: "Maths 98 · Bio 98"      },
-  { name: "Pravin Kandade",   photo: "/images/topper-pravin-kandade.jpg",   scores: "Phy 99 · Maths 99"      },
+  { name: "Ganesh More",      photo: "/images/topper-ganesh-more.jpg",      scores: "NEET: 587"         },
+  { name: "Kunal More",       photo: "/images/topper-kunal-mare.jpg",       scores: "MHT-CET: 99.28%"   },
+  { name: "Trupti Chaudhari", photo: "/images/topper-trupti-chaudhari.jpg", scores: "PCM: 97.61%"       },
+  { name: "Pranali Dongale",  photo: "/images/topper-pranali-dongale.jpg",  scores: "Maths 98 · Chem 94"},
+  { name: "Kaveri Kande",     photo: "/images/topper-kaveri-kande.jpg",     scores: "Maths 98 · Bio 98" },
+  { name: "Pravin Kandade",   photo: "/images/topper-pravin-kandade.jpg",   scores: "Phy 99 · Maths 99" },
 ];
 
 const commerceToppers = [
-  { name: "Sejal Pawar",   photo: "/images/topper-sejal-pawar.jpg",   scores: "Accounts 99 · Eco 94 · OC 95 · Maths 91" },
-  { name: "Janhavi Ghag",  photo: "/images/topper-janhavi-ghag.jpg",  scores: "Accounts 94 · Eco 92 · OC 95 · SP 96"    },
+  { name: "Sejal Pawar",  photo: "/images/topper-sejal-pawar.jpg",  scores: "Accounts 99 · Eco 94 · OC 95 · Maths 91" },
+  { name: "Janhavi Ghag", photo: "/images/topper-janhavi-ghag.jpg", scores: "Accounts 94 · Eco 92 · OC 95 · SP 96"    },
 ];
 
 const iitSelections = [
-  { name: "Hanumant Malkapure", college: "IIT Madras",  photo: "/images/topper-hanumant-malkapure.jpg" },
-  { name: "Umesh Mali",         college: "IIT Indore",  photo: "/images/topper-umesh-mali.jpg" },
+  { name: "Hanumant Malkapure", college: "IIT Madras", photo: "/images/topper-hanumant-malkapure.jpg" },
+  { name: "Umesh Mali",         college: "IIT Indore", photo: "/images/topper-umesh-mali.jpg" },
 ];
 
 export default function Results() {
@@ -85,7 +85,7 @@ export default function Results() {
           <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
             Hall of <span className="text-gold-gradient">Champions</span>
           </h2>
-          <p className="mt-3 text-white/50 text-lg">Real students. Real results. Our toppers speak louder than any advertisement.</p>
+          <p className="mt-3 text-white/75 text-lg">Real students. Real results. Our toppers speak louder than any advertisement.</p>
         </motion.div>
 
         {/* Stats */}
@@ -96,13 +96,13 @@ export default function Results() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: i * 0.09 }}
-              className="bg-white/6 border border-white/8 rounded-2xl p-5 text-center hover:bg-white/10 hover:border-[#E8C547]/25 transition-all"
+              className="bg-white/10 border border-white/15 rounded-2xl p-5 text-center hover:bg-white/15 hover:border-[#E8C547]/40 transition-all"
             >
               <div className="text-3xl mb-2">{s.icon}</div>
               <div className="text-3xl sm:text-4xl font-extrabold text-[#E8C547]">
                 <AnimatedCounter target={s.number} suffix={s.suffix} />
               </div>
-              <div className="text-white/50 text-xs font-semibold mt-1">{s.label}</div>
+              <div className="text-white/80 text-xs font-semibold mt-1">{s.label}</div>
             </motion.div>
           ))}
         </div>
@@ -112,21 +112,21 @@ export default function Results() {
           initial={{ opacity: 0, y: 18 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.15 }}
-          className="mb-12 bg-[#E8C547]/10 border border-[#E8C547]/25 rounded-3xl p-6 sm:p-8"
+          className="mb-12 bg-[#E8C547]/12 border border-[#E8C547]/30 rounded-3xl p-6 sm:p-8"
         >
           <div className="flex flex-col sm:flex-row items-center gap-6">
             <div className="text-center sm:text-left flex-shrink-0">
               <div className="text-[#E8C547] font-extrabold text-5xl">30+</div>
-              <div className="text-white/60 text-sm font-semibold">Students in IITs / NITs</div>
+              <div className="text-white/80 text-sm font-semibold">Students in IITs / NITs</div>
             </div>
-            <div className="w-px h-14 bg-[#E8C547]/20 hidden sm:block" />
+            <div className="w-px h-14 bg-[#E8C547]/25 hidden sm:block" />
             <div className="flex-1">
               <div className="text-white font-extrabold text-base mb-3">IIT Selections</div>
               <div className="flex flex-wrap gap-3">
                 {iitSelections.map(s => (
-                  <div key={s.name} className="flex items-center gap-3 bg-white/8 border border-white/10 rounded-2xl px-4 py-2.5">
-                    <div className="relative w-10 h-10 rounded-full overflow-hidden ring-2 ring-[#E8C547]/60 flex-shrink-0">
-                      <Image src={s.photo} alt={s.name} fill className="object-cover object-top" sizes="40px" />
+                  <div key={s.name} className="flex items-center gap-3 bg-white/10 border border-white/15 rounded-2xl px-4 py-2.5">
+                    <div className="relative w-14 h-14 rounded-full overflow-hidden ring-2 ring-[#E8C547]/70 flex-shrink-0">
+                      <Image src={s.photo} alt={s.name} fill className="object-cover object-top" sizes="56px" />
                     </div>
                     <div>
                       <div className="text-white font-bold text-sm">{s.name}</div>
@@ -134,11 +134,11 @@ export default function Results() {
                     </div>
                   </div>
                 ))}
-                <div className="flex items-center gap-3 bg-white/8 border border-white/10 rounded-2xl px-4 py-2.5">
-                  <div className="w-10 h-10 rounded-full bg-[#E8C547]/20 flex items-center justify-center text-[#E8C547] font-extrabold text-lg">+</div>
+                <div className="flex items-center gap-3 bg-white/10 border border-white/15 rounded-2xl px-4 py-2.5">
+                  <div className="w-14 h-14 rounded-full bg-[#E8C547]/20 flex items-center justify-center text-[#E8C547] font-extrabold text-xl">+</div>
                   <div>
                     <div className="text-white font-bold text-sm">Many More</div>
-                    <div className="text-white/45 text-xs">NITs · COEP · Govt Colleges</div>
+                    <div className="text-white/70 text-xs">NITs · COEP · Govt Colleges</div>
                   </div>
                 </div>
               </div>
@@ -146,11 +146,11 @@ export default function Results() {
           </div>
         </motion.div>
 
-        {/* Featured Toppers */}
+        {/* Featured Toppers — Full portrait cards */}
         <div className="flex items-center gap-3 mb-6">
-          <div className="h-px flex-1 bg-gradient-to-r from-transparent to-[#E8C547]/30" />
+          <div className="h-px flex-1 bg-gradient-to-r from-transparent to-[#E8C547]/35" />
           <span className="text-[#E8C547] font-extrabold text-xs uppercase tracking-[0.2em] px-4">Featured Achievers</span>
-          <div className="h-px flex-1 bg-gradient-to-l from-transparent to-[#E8C547]/30" />
+          <div className="h-px flex-1 bg-gradient-to-l from-transparent to-[#E8C547]/35" />
         </div>
 
         <div className="grid md:grid-cols-3 gap-5 mb-12">
@@ -160,22 +160,23 @@ export default function Results() {
               initial={{ opacity: 0, y: 32 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.22 + i * 0.12 }}
-              className="relative bg-white/6 border border-white/10 rounded-3xl p-6 hover:bg-white/10 hover:border-[#E8C547]/30 transition-all overflow-hidden group"
+              className="relative bg-white/8 border border-white/12 rounded-3xl overflow-hidden hover:bg-white/12 hover:border-[#E8C547]/40 transition-all group"
             >
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 shimmer-over pointer-events-none" />
-              <span className={`inline-block text-xs font-extrabold px-3 py-1 rounded-full mb-4 ${t.badgeBg}`}>{t.badge}</span>
-              <div className="flex items-center gap-4 mb-5">
-                <div className={`relative w-20 h-20 rounded-2xl overflow-hidden ring-2 ring-offset-2 ring-offset-[#13115A] flex-shrink-0 ${t.ring}`}>
-                  <Image src={t.photo} alt={t.name} fill className="object-cover object-top" sizes="80px" />
+              {/* Large portrait photo */}
+              <div className={`relative w-full aspect-[3/4] overflow-hidden ring-0 group-hover:ring-2 ${t.ring} transition-all duration-300`}>
+                <Image src={t.photo} alt={t.name} fill className="object-cover object-top" sizes="(max-width: 768px) 100vw, 33vw" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0D0B47]/90 via-[#0D0B47]/20 to-transparent" />
+                {/* Badge at top */}
+                <span className={`absolute top-4 left-4 text-xs font-extrabold px-3 py-1.5 rounded-full ${t.badgeBg}`}>{t.badge}</span>
+                {/* Info overlay at bottom */}
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <div className="text-white font-extrabold text-xl leading-tight">{t.name}</div>
+                  <div className="text-white/75 text-sm mt-0.5">{t.exam}</div>
+                  <div className="mt-3 bg-white/15 backdrop-blur-sm border border-white/15 rounded-xl p-3">
+                    <div className="text-[#E8C547] font-extrabold text-2xl">{t.score}</div>
+                    <div className="text-white/80 text-sm font-semibold mt-0.5">{t.sub}</div>
+                  </div>
                 </div>
-                <div>
-                  <div className="text-white font-extrabold text-lg leading-tight">{t.name}</div>
-                  <div className="text-white/50 text-sm">{t.exam}</div>
-                </div>
-              </div>
-              <div className="bg-white/8 border border-white/8 rounded-2xl p-4">
-                <div className="text-[#E8C547] font-extrabold text-2xl">{t.score}</div>
-                <div className="text-white/60 text-sm font-semibold mt-0.5">{t.sub}</div>
               </div>
             </motion.div>
           ))}
@@ -183,49 +184,52 @@ export default function Results() {
 
         {/* Science Toppers */}
         <div className="flex items-center gap-3 mb-5">
-          <div className="h-px flex-1 bg-gradient-to-r from-transparent to-blue-400/30" />
+          <div className="h-px flex-1 bg-gradient-to-r from-transparent to-blue-400/35" />
           <span className="text-blue-300 font-extrabold text-xs uppercase tracking-[0.2em] px-4">Science Toppers</span>
-          <div className="h-px flex-1 bg-gradient-to-l from-transparent to-blue-400/30" />
+          <div className="h-px flex-1 bg-gradient-to-l from-transparent to-blue-400/35" />
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-10">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-10">
           {scienceToppers.map((t, i) => (
             <motion.div
               key={t.name}
               initial={{ opacity: 0, scale: 0.92 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ delay: 0.52 + i * 0.07 }}
-              className="bg-white/5 border border-white/8 rounded-2xl p-4 text-center hover:bg-white/10 hover:border-blue-400/30 transition-all group"
+              className="bg-white/8 border border-white/12 rounded-2xl overflow-hidden hover:bg-white/14 hover:border-blue-400/40 transition-all group"
             >
-              <div className="relative w-14 h-14 rounded-xl overflow-hidden mx-auto mb-3 ring-2 ring-blue-400/25 group-hover:ring-blue-400/55 transition-all">
-                <Image src={t.photo} alt={t.name} fill className="object-cover object-top" sizes="56px" />
+              <div className="relative w-full aspect-square overflow-hidden">
+                <Image src={t.photo} alt={t.name} fill className="object-cover object-top transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 17vw" />
               </div>
-              <div className="text-white font-bold text-xs mb-1 leading-tight">{t.name}</div>
-              <div className="text-blue-300 text-[10px] font-semibold leading-tight">{t.scores}</div>
+              <div className="p-3 text-center">
+                <div className="text-white font-bold text-xs mb-1 leading-tight">{t.name}</div>
+                <div className="text-blue-300 text-[10px] font-semibold leading-tight">{t.scores}</div>
+              </div>
             </motion.div>
           ))}
         </div>
 
         {/* Commerce Toppers */}
         <div className="flex items-center gap-3 mb-5">
-          <div className="h-px flex-1 bg-gradient-to-r from-transparent to-emerald-400/30" />
+          <div className="h-px flex-1 bg-gradient-to-r from-transparent to-emerald-400/35" />
           <span className="text-emerald-300 font-extrabold text-xs uppercase tracking-[0.2em] px-4">Commerce Toppers</span>
-          <div className="h-px flex-1 bg-gradient-to-l from-transparent to-emerald-400/30" />
+          <div className="h-px flex-1 bg-gradient-to-l from-transparent to-emerald-400/35" />
         </div>
-        <div className="grid sm:grid-cols-2 gap-4 max-w-lg mb-10">
+        <div className="grid sm:grid-cols-2 gap-4 max-w-xl mb-10">
           {commerceToppers.map((t, i) => (
             <motion.div
               key={t.name}
               initial={{ opacity: 0, x: -20 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: 0.68 + i * 0.1 }}
-              className="flex items-center gap-4 bg-white/5 border border-white/8 rounded-2xl p-4 hover:bg-white/10 hover:border-emerald-400/30 transition-all group"
+              className="bg-white/8 border border-white/12 rounded-2xl overflow-hidden hover:bg-white/14 hover:border-emerald-400/40 transition-all group"
             >
-              <div className="relative w-14 h-14 rounded-xl overflow-hidden flex-shrink-0 ring-2 ring-emerald-400/25 group-hover:ring-emerald-400/55 transition-all">
-                <Image src={t.photo} alt={t.name} fill className="object-cover object-top" sizes="56px" />
-              </div>
-              <div>
-                <div className="text-white font-bold text-sm">{t.name}</div>
-                <div className="text-emerald-300 text-xs font-semibold mt-0.5">{t.scores}</div>
+              <div className="relative w-full aspect-[4/3] overflow-hidden">
+                <Image src={t.photo} alt={t.name} fill className="object-cover object-top transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 50vw" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0D0B47]/85 via-transparent to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <div className="text-white font-bold text-sm">{t.name}</div>
+                  <div className="text-emerald-300 text-xs font-semibold mt-0.5">{t.scores}</div>
+                </div>
               </div>
             </motion.div>
           ))}
@@ -236,10 +240,10 @@ export default function Results() {
           initial={{ opacity: 0, y: 18 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.8 }}
-          className="bg-white/5 border border-[#E8C547]/15 rounded-3xl p-8 text-center"
+          className="bg-white/8 border border-[#E8C547]/20 rounded-3xl p-8 text-center"
         >
           <div className="text-[#E8C547] text-5xl font-serif mb-3">&ldquo;</div>
-          <p className="text-white/70 text-lg max-w-3xl mx-auto leading-relaxed italic">
+          <p className="text-white/85 text-lg max-w-3xl mx-auto leading-relaxed italic">
             Our students consistently secure top ranks in HSC Board exams, MHT-CET, JEE, and NEET.
             Every student has the potential to succeed — they just need the right guidance.
           </p>

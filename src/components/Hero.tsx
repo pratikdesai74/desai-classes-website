@@ -43,7 +43,7 @@ export default function Hero() {
               <span className="text-gold-gradient">Become Toppers</span>
             </h1>
 
-            <p className="mt-5 text-white/65 text-base sm:text-lg leading-relaxed max-w-[520px]">
+            <p className="mt-5 text-white/85 text-base sm:text-lg leading-relaxed max-w-[520px]">
               Pune&apos;s most trusted coaching institute for 11th &amp; 12th Science &amp;
               Commerce. <span className="text-white/90 font-semibold">35+ years</span> of
               shaping top rankers — JEE AIR&nbsp;155, NEET&nbsp;603, CET&nbsp;99.9&nbsp;percentile.
@@ -82,7 +82,7 @@ export default function Hero() {
                   className="bg-white/6 border border-white/10 rounded-2xl p-3 sm:p-4 text-center hover:bg-white/10 transition-all"
                 >
                   <div className="text-[#E8C547] text-2xl sm:text-3xl font-extrabold leading-none">{s.num}</div>
-                  <div className="text-white/50 text-[10px] sm:text-xs font-medium mt-1.5 whitespace-pre-line leading-tight">{s.label}</div>
+                  <div className="text-white/75 text-[10px] sm:text-xs font-medium mt-1.5 whitespace-pre-line leading-tight">{s.label}</div>
                 </motion.div>
               ))}
             </div>

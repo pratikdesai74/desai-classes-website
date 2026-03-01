@@ -150,14 +150,14 @@ export default function BatchTimings() {
               >
                 <div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center text-xl flex-shrink-0">{item.icon}</div>
                 <div>
-                  <div className="text-white/55 text-xs font-bold uppercase tracking-wider mb-0.5">{item.label}</div>
+                  <div className="text-white/80 text-xs font-bold uppercase tracking-wider mb-0.5">{item.label}</div>
                   <div className="text-white font-bold text-sm">{item.value}</div>
                 </div>
               </div>
             ))}
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-5 border-t border-white/8">
-            <p className="text-white/50 text-sm">Seats are limited per batch — early registration recommended.</p>
+            <p className="text-white/80 text-sm">Seats are limited per batch — early registration recommended.</p>
             <a href="#contact" className="flex-shrink-0 px-6 py-3 btn-gold text-sm rounded-xl whitespace-nowrap">
               Reserve Your Seat →
             </a>
