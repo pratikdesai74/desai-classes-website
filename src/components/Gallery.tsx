@@ -19,7 +19,7 @@ export default function Gallery() {
 
   return (
     <>
-      <section id="gallery" className="py-16 lg:py-24 dark-bg dot-grid overflow-hidden" ref={ref}>
+      <section id="gallery" className="py-16 lg:py-24 dark-bg overflow-hidden" ref={ref}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           <motion.div

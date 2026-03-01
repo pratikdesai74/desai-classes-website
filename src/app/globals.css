@@ -83,17 +83,26 @@ html { scroll-behavior: smooth; }
    BACKGROUNDS
 ════════════════════════════════ */
 
-/* Hero / main dark sections — matches logo */
+/* Hero / main dark sections — matches logo
+   NOTE: dot pattern is baked in so it cannot be overridden by a second class */
 .hero-bg {
-  background: linear-gradient(145deg, #0D0B47 0%, #13115A 40%, #1E1B6B 80%, #252391 100%);
+  background-color: #0D0B47;
+  background-image:
+    radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(145deg, #0D0B47 0%, #13115A 40%, #1E1B6B 80%, #252391 100%);
+  background-size: 28px 28px, cover;
 }
 
-/* Alternate dark sections */
+/* Alternate dark sections — dot pattern baked in */
 .dark-bg {
-  background: linear-gradient(160deg, #0D0B47 0%, #13115A 55%, #1B196A 100%);
+  background-color: #0D0B47;
+  background-image:
+    radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(160deg, #0D0B47 0%, #13115A 55%, #1B196A 100%);
+  background-size: 28px 28px, cover;
 }
 
-/* Subtle dot grid overlay for dark sections */
+/* Standalone dot grid — for non-gradient dark sections only */
 .dot-grid {
   background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
   background-size: 28px 28px;

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center hero-bg dot-grid overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center hero-bg overflow-hidden">
 
       {/* Ambient light orbs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -14,7 +14,7 @@ export default function Hero() {
         <div className="absolute top-1/2 right-1/3 w-48 h-48 rounded-full bg-[#E8C547]/5 blur-[60px]" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-20 relative z-10 w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-20 relative z-10 w-full">
         <div className="grid lg:grid-cols-[55%_45%] gap-10 lg:gap-16 items-center">
 
           {/* ── LEFT: Text ── */}
@@ -99,11 +99,11 @@ export default function Hero() {
               {/* Main image — tall portrait crop */}
               <div className="relative aspect-[4/5] w-full rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/10">
                 <Image
-                  src="/images/class-3.jpg"
-                  alt="Desai Classes Institute"
+                  src="/images/classroom-hero.jpg"
+                  alt="Desai Classes Classroom"
                   fill
                   priority
-                  className="object-cover"
+                  className="object-cover object-center"
                   sizes="45vw"
                 />
                 {/* Dark gradient from bottom */}
