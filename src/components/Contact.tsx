@@ -37,13 +37,11 @@ export default function Contact() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           className="text-center max-w-2xl mx-auto mb-14"
         >
-          <span className="inline-block text-[#F97316] font-bold text-xs uppercase tracking-[0.2em] mb-3">
-            Get In Touch
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0B1829]">
-            Start Your <span className="gradient-text-orange">Journey</span> Today
+          <span className="label-light">Get In Touch</span>
+          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F0E3D]">
+            Start Your <span className="text-indigo-gradient">Journey</span> Today
           </h2>
-          <p className="mt-4 text-[#6B7280] text-lg">
+          <p className="mt-4 text-[#6B69A0] text-lg">
             Visit us for a free demo class or send an enquiry. We&apos;d love to help you reach your goals.
           </p>
         </motion.div>
@@ -58,13 +56,13 @@ export default function Contact() {
             className="lg:col-span-2"
           >
             {/* Dark info card */}
-            <div className="bg-[#0B1829] rounded-3xl p-7 mb-5">
+            <div className="dark-bg rounded-3xl p-7 mb-5">
               <h3 className="text-white font-extrabold text-xl mb-6">Visit Us</h3>
               <div className="space-y-5">
                 {/* Address */}
                 <div className="flex gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#F97316]/20 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-5 h-5 text-[#F97316]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+                  <div className="w-10 h-10 rounded-xl bg-[#E8C547]/20 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-[#E8C547]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
@@ -81,13 +79,13 @@ export default function Contact() {
 
                 {/* Timings */}
                 <div className="flex gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#F59E0B]/20 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-5 h-5 text-[#F59E0B]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+                  <div className="w-10 h-10 rounded-xl bg-[#E8C547]/20 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-[#E8C547]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
                   <div>
-                    <div className="text-white font-bold text-sm mb-0.5">Timings</div>
+                    <div className="text-white font-bold text-sm mb-0.5">Office Timings</div>
                     <div className="text-white/50 text-sm">Mon – Sat: 7:00 am – 9:00 pm</div>
                     <div className="text-white/50 text-sm">Sunday: By appointment</div>
                   </div>
@@ -98,14 +96,14 @@ export default function Contact() {
 
                 {/* Call */}
                 <a href="tel:+919822598294" className="flex gap-4 group">
-                  <div className="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-500/30 transition-colors">
-                    <svg className="w-5 h-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+                  <div className="w-10 h-10 rounded-xl bg-[#4644CE]/30 flex items-center justify-center flex-shrink-0 group-hover:bg-[#4644CE]/50 transition-colors">
+                    <svg className="w-5 h-5 text-[#A8A6FF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                   </div>
                   <div>
                     <div className="text-white font-bold text-sm mb-0.5">Call Us</div>
-                    <div className="text-blue-300 font-bold text-base group-hover:text-blue-200 transition-colors">+91 98225 98294</div>
+                    <div className="text-[#A8A6FF] font-bold text-base group-hover:text-white transition-colors">+91 98225 98294</div>
                   </div>
                 </a>
 
@@ -130,7 +128,7 @@ export default function Contact() {
             </div>
 
             {/* Map */}
-            <div className="rounded-2xl overflow-hidden shadow-lg h-[200px] border border-gray-100">
+            <div className="rounded-2xl overflow-hidden shadow-lg h-[200px] border border-[#1E1B6B]/12">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.8!2d73.8126759!3d18.4868648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDI5JzEyLjciTiA3M8KwNDgnNDUuNiJF!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
                 width="100%"
@@ -151,10 +149,10 @@ export default function Contact() {
             transition={{ delay: 0.3 }}
             className="lg:col-span-3"
           >
-            <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm">
+            <div className="bg-white rounded-3xl p-8 border border-[#1E1B6B]/10 shadow-sm">
               <div className="mb-7">
-                <h3 className="text-2xl font-extrabold text-[#0B1829]">Send an Enquiry</h3>
-                <p className="text-[#6B7280] text-sm mt-1">Fill the form and we&apos;ll reach out via WhatsApp instantly.</p>
+                <h3 className="text-2xl font-extrabold text-[#0F0E3D]">Send an Enquiry</h3>
+                <p className="text-[#6B69A0] text-sm mt-1">Fill the form and we&apos;ll reach out via WhatsApp instantly.</p>
               </div>
 
               {submitted ? (
@@ -168,11 +166,11 @@ export default function Contact() {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h4 className="text-xl font-extrabold text-[#0B1829]">Enquiry Sent!</h4>
-                  <p className="text-[#6B7280] mt-2 text-sm">Your enquiry has been sent via WhatsApp. We&apos;ll respond shortly.</p>
+                  <h4 className="text-xl font-extrabold text-[#0F0E3D]">Enquiry Sent!</h4>
+                  <p className="text-[#6B69A0] mt-2 text-sm">Your enquiry has been sent via WhatsApp. We&apos;ll respond shortly.</p>
                   <button
                     onClick={() => { setSubmitted(false); setForm({ name: "", phone: "", email: "", course: "", message: "" }); }}
-                    className="mt-6 text-[#F97316] font-bold underline underline-offset-4 text-sm"
+                    className="mt-6 text-[#1E1B6B] font-bold underline underline-offset-4 text-sm hover:text-[#E8C547] transition-colors"
                   >
                     Send another enquiry
                   </button>
@@ -181,49 +179,49 @@ export default function Contact() {
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
-                      <label htmlFor="name" className="block text-xs font-bold text-[#0B1829] mb-1.5 uppercase tracking-wide">
+                      <label htmlFor="name" className="block text-xs font-bold text-[#0F0E3D] mb-1.5 uppercase tracking-wide">
                         Name <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="text" id="name" name="name" required
                         value={form.name} onChange={handleChange}
                         placeholder="Student / Parent name"
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-[#EEF4FF]/30 focus:border-[#F97316] focus:ring-2 focus:ring-[#F97316]/10 outline-none transition-all text-[#0B1829] text-sm placeholder:text-gray-400"
+                        className="w-full px-4 py-3 rounded-xl border border-[#1E1B6B]/15 bg-[#F0EFFF]/50 focus:border-[#1E1B6B] focus:ring-2 focus:ring-[#1E1B6B]/10 outline-none transition-all text-[#0F0E3D] text-sm placeholder:text-[#6B69A0]/60"
                       />
                     </div>
                     <div>
-                      <label htmlFor="phone" className="block text-xs font-bold text-[#0B1829] mb-1.5 uppercase tracking-wide">
+                      <label htmlFor="phone" className="block text-xs font-bold text-[#0F0E3D] mb-1.5 uppercase tracking-wide">
                         Phone <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="tel" id="phone" name="phone" required
                         value={form.phone} onChange={handleChange}
                         placeholder="+91 XXXXX XXXXX"
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-[#EEF4FF]/30 focus:border-[#F97316] focus:ring-2 focus:ring-[#F97316]/10 outline-none transition-all text-[#0B1829] text-sm placeholder:text-gray-400"
+                        className="w-full px-4 py-3 rounded-xl border border-[#1E1B6B]/15 bg-[#F0EFFF]/50 focus:border-[#1E1B6B] focus:ring-2 focus:ring-[#1E1B6B]/10 outline-none transition-all text-[#0F0E3D] text-sm placeholder:text-[#6B69A0]/60"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-xs font-bold text-[#0B1829] mb-1.5 uppercase tracking-wide">
-                      Email <span className="text-gray-400 font-normal normal-case">(optional)</span>
+                    <label htmlFor="email" className="block text-xs font-bold text-[#0F0E3D] mb-1.5 uppercase tracking-wide">
+                      Email <span className="text-[#6B69A0] font-normal normal-case">(optional)</span>
                     </label>
                     <input
                       type="email" id="email" name="email"
                       value={form.email} onChange={handleChange}
                       placeholder="your@email.com"
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-[#EEF4FF]/30 focus:border-[#F97316] focus:ring-2 focus:ring-[#F97316]/10 outline-none transition-all text-[#0B1829] text-sm placeholder:text-gray-400"
+                      className="w-full px-4 py-3 rounded-xl border border-[#1E1B6B]/15 bg-[#F0EFFF]/50 focus:border-[#1E1B6B] focus:ring-2 focus:ring-[#1E1B6B]/10 outline-none transition-all text-[#0F0E3D] text-sm placeholder:text-[#6B69A0]/60"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="course" className="block text-xs font-bold text-[#0B1829] mb-1.5 uppercase tracking-wide">
+                    <label htmlFor="course" className="block text-xs font-bold text-[#0F0E3D] mb-1.5 uppercase tracking-wide">
                       Course Interested In <span className="text-red-500">*</span>
                     </label>
                     <select
                       id="course" name="course" required
                       value={form.course} onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-[#EEF4FF]/30 focus:border-[#F97316] focus:ring-2 focus:ring-[#F97316]/10 outline-none transition-all text-[#0B1829] text-sm"
+                      className="w-full px-4 py-3 rounded-xl border border-[#1E1B6B]/15 bg-[#F0EFFF]/50 focus:border-[#1E1B6B] focus:ring-2 focus:ring-[#1E1B6B]/10 outline-none transition-all text-[#0F0E3D] text-sm"
                     >
                       <option value="">Select a course</option>
                       <option value="11th Science">11th Science</option>
@@ -238,14 +236,14 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-xs font-bold text-[#0B1829] mb-1.5 uppercase tracking-wide">
-                      Message <span className="text-gray-400 font-normal normal-case">(optional)</span>
+                    <label htmlFor="message" className="block text-xs font-bold text-[#0F0E3D] mb-1.5 uppercase tracking-wide">
+                      Message <span className="text-[#6B69A0] font-normal normal-case">(optional)</span>
                     </label>
                     <textarea
                       id="message" name="message" rows={3}
                       value={form.message} onChange={handleChange}
                       placeholder="Any questions or specific requirements..."
-                      className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-[#EEF4FF]/30 focus:border-[#F97316] focus:ring-2 focus:ring-[#F97316]/10 outline-none transition-all text-[#0B1829] text-sm placeholder:text-gray-400 resize-none"
+                      className="w-full px-4 py-3 rounded-xl border border-[#1E1B6B]/15 bg-[#F0EFFF]/50 focus:border-[#1E1B6B] focus:ring-2 focus:ring-[#1E1B6B]/10 outline-none transition-all text-[#0F0E3D] text-sm placeholder:text-[#6B69A0]/60 resize-none"
                     />
                   </div>
 
@@ -259,9 +257,9 @@ export default function Contact() {
                     Send via WhatsApp
                   </button>
 
-                  <p className="text-center text-gray-400 text-xs">
+                  <p className="text-center text-[#6B69A0] text-xs">
                     Or call us at{" "}
-                    <a href="tel:+919822598294" className="text-[#0B1829] font-bold hover:text-[#F97316] transition-colors">
+                    <a href="tel:+919822598294" className="text-[#1E1B6B] font-bold hover:text-[#E8C547] transition-colors">
                       +91 98225 98294
                     </a>
                   </p>

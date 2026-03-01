@@ -5,76 +5,52 @@ import { useRef } from "react";
 
 const courses = [
   {
-    title: "11th Science",
-    icon: "🔬",
-    badge: "Foundation Year",
+    icon: "🔬", title: "11th Science",
+    badge: "Foundation Year", badgeClass: "bg-blue-100 text-blue-800",
     subjects: ["Physics", "Chemistry", "Mathematics", "Biology"],
-    description: "Build rock-solid foundations with conceptual clarity and rigorous problem-solving for board and competitive exams.",
+    desc: "Build rock-solid foundations with conceptual clarity and rigorous problem-solving for board and competitive exams.",
     highlight: "CET · JEE · NEET Ready",
-    gradientFrom: "#1D3F74",
-    gradientTo: "#2563EB",
-    accentColor: "text-blue-400",
-    badgeBg: "bg-blue-500/20 text-blue-300",
+    barColor: "#1E1B6B",
   },
   {
-    title: "12th Science",
-    icon: "⚛️",
-    badge: "Most Popular",
+    icon: "⚛️", title: "12th Science",
+    badge: "Most Popular", badgeClass: "bg-[#1E1B6B] text-white",
     subjects: ["Physics", "Chemistry", "Mathematics", "Biology"],
-    description: "Master advanced concepts, ace HSC boards, and crack MHT-CET, JEE & NEET with our board + entrance combo.",
+    desc: "Master advanced concepts, ace HSC boards, and crack MHT-CET, JEE & NEET with our board + entrance combo.",
     highlight: "Board + Entrance Combo",
-    gradientFrom: "#7C3AED",
-    gradientTo: "#C026D3",
-    accentColor: "text-purple-400",
-    badgeBg: "bg-purple-500/20 text-purple-300",
+    barColor: "#E8C547",
   },
   {
-    title: "11th Commerce",
-    icon: "📈",
-    badge: "CA · CS Prep",
-    subjects: ["Accountancy", "Economics", "OC/SP", "Maths/Stats"],
-    description: "Develop strong fundamentals in Commerce with practical problem-solving and conceptual depth.",
+    icon: "📈", title: "11th Commerce",
+    badge: "CA · CS Prep", badgeClass: "bg-amber-100 text-amber-800",
+    subjects: ["Accountancy", "Economics", "OC / SP", "Maths / Stats"],
+    desc: "Develop strong fundamentals in Commerce with practical problem-solving and conceptual depth.",
     highlight: "CA · CS Foundation",
-    gradientFrom: "#D97706",
-    gradientTo: "#F97316",
-    accentColor: "text-amber-400",
-    badgeBg: "bg-amber-500/20 text-amber-300",
+    barColor: "#2D2BB5",
   },
   {
-    title: "12th Commerce",
-    icon: "💼",
-    badge: "Board Focused",
-    subjects: ["Accountancy", "Economics", "OC/SP", "Maths/Stats"],
-    description: "Excel in board exams with comprehensive preparation and professional course entrance guidance.",
+    icon: "💼", title: "12th Commerce",
+    badge: "Board Focused", badgeClass: "bg-green-100 text-green-800",
+    subjects: ["Accountancy", "Economics", "OC / SP", "Maths / Stats"],
+    desc: "Excel in board exams with comprehensive preparation and professional course entrance guidance.",
     highlight: "Board + Professional Prep",
-    gradientFrom: "#059669",
-    gradientTo: "#10B981",
-    accentColor: "text-emerald-400",
-    badgeBg: "bg-emerald-500/20 text-emerald-300",
+    barColor: "#059669",
   },
   {
-    title: "MHT-CET Prep",
-    icon: "🎯",
-    badge: "Maharashtra Focused",
+    icon: "🎯", title: "MHT-CET Prep",
+    badge: "Maharashtra Focus", badgeClass: "bg-red-100 text-red-800",
     subjects: ["Physics", "Chemistry", "Mathematics / Biology"],
-    description: "Focused year-long programs and crash courses for Maharashtra CET with previous year paper practice.",
+    desc: "Focused year-long programs and crash courses for Maharashtra CET with past paper practice.",
     highlight: "99.9 Percentile Track",
-    gradientFrom: "#DC2626",
-    gradientTo: "#F97316",
-    accentColor: "text-rose-400",
-    badgeBg: "bg-rose-500/20 text-rose-300",
+    barColor: "#DC2626",
   },
   {
-    title: "JEE / NEET",
-    icon: "🏆",
-    badge: "National Level",
-    subjects: ["Advanced Physics", "Advanced Chemistry", "Advanced Math/Bio"],
-    description: "Intensive national-level coaching by expert mentors with IIT/NIT-focused study material and mock tests.",
-    highlight: "AIR 155 Track Record",
-    gradientFrom: "#0E7490",
-    gradientTo: "#6366F1",
-    accentColor: "text-cyan-400",
-    badgeBg: "bg-cyan-500/20 text-cyan-300",
+    icon: "🏆", title: "JEE / NEET",
+    badge: "National Level", badgeClass: "bg-purple-100 text-purple-800",
+    subjects: ["Advanced Physics", "Advanced Chemistry", "Advanced Maths / Bio"],
+    desc: "Intensive national-level coaching by expert mentors. AIR 155 track record.",
+    highlight: "AIR 155 · NEET 603",
+    barColor: "#7C3AED",
   },
 ];
 
@@ -83,80 +59,69 @@ export default function Courses() {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="courses" className="py-20 lg:py-28 bg-[#EEF4FF]" ref={ref}>
+    <section id="courses" className="py-16 lg:py-24 bg-[#F0EFFF]" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
         <motion.div
-          initial={{ opacity: 0, y: 28 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          className="text-center max-w-2xl mx-auto mb-14"
+          className="text-center max-w-xl mx-auto mb-12"
         >
-          <span className="inline-block text-[#F97316] font-bold text-xs uppercase tracking-[0.2em] mb-3">
-            What We Offer
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0B1829]">
-            Courses That <span className="gradient-text-orange">Build Toppers</span>
+          <span className="label-light">What We Offer</span>
+          <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F0E3D]">
+            Courses That <span className="text-[#1E1B6B]">Build Toppers</span>
           </h2>
-          <p className="mt-4 text-[#6B7280] text-lg">
+          <p className="mt-3 text-[#6B69A0] text-lg">
             Comprehensive programs designed for board excellence and competitive exam success.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {courses.map((course, i) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {courses.map((c, i) => (
             <motion.div
-              key={course.title}
-              initial={{ opacity: 0, y: 36 }}
+              key={c.title}
+              initial={{ opacity: 0, y: 32 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: i * 0.08 }}
-              className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-white card-hover group"
+              className="bg-white rounded-2xl overflow-hidden shadow-sm border border-[#1E1B6B]/8 card-lift group"
             >
-              {/* Gradient header */}
-              <div
-                className="h-2 w-full"
-                style={{ background: `linear-gradient(90deg, ${course.gradientFrom}, ${course.gradientTo})` }}
-              />
+              {/* Color bar */}
+              <div className="h-1.5 w-full" style={{ background: c.barColor }} />
 
-              <div className="p-7">
-                {/* Icon + Title row */}
+              <div className="p-6">
+                {/* Icon + title */}
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-3">
                     <div
-                      className="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl shadow-sm"
-                      style={{ background: `linear-gradient(135deg, ${course.gradientFrom}20, ${course.gradientTo}30)` }}
+                      className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl"
+                      style={{ background: `${c.barColor}14` }}
                     >
-                      {course.icon}
+                      {c.icon}
                     </div>
-                    <div>
-                      <h3 className="text-xl font-extrabold text-[#0B1829]">{course.title}</h3>
-                    </div>
+                    <h3 className="text-lg font-extrabold text-[#0F0E3D]">{c.title}</h3>
                   </div>
-                  <span className={`text-[10px] font-bold px-2.5 py-1 rounded-full whitespace-nowrap ${course.badgeBg}`}>
-                    {course.badge}
+                  <span className={`text-[10px] font-extrabold px-2.5 py-1 rounded-full whitespace-nowrap ${c.badgeClass}`}>
+                    {c.badge}
                   </span>
                 </div>
 
-                <p className="text-[#6B7280] text-sm leading-relaxed mb-4">{course.description}</p>
+                <p className="text-[#6B69A0] text-sm leading-relaxed mb-4">{c.desc}</p>
 
                 {/* Subjects */}
-                <div className="flex flex-wrap gap-2 mb-5">
-                  {course.subjects.map((s) => (
-                    <span
-                      key={s}
-                      className="text-xs bg-[#EEF4FF] text-[#1D3F74] px-3 py-1.5 rounded-lg font-semibold border border-[#1D3F74]/10"
-                    >
+                <div className="flex flex-wrap gap-1.5 mb-5">
+                  {c.subjects.map(s => (
+                    <span key={s} className="text-xs font-semibold text-[#1E1B6B] bg-[#F0EFFF] px-3 py-1 rounded-lg border border-[#1E1B6B]/10">
                       {s}
                     </span>
                   ))}
                 </div>
 
-                {/* CTA */}
-                <div className="pt-4 border-t border-gray-50 flex items-center justify-between">
-                  <span className="text-xs font-bold text-[#F97316]">{course.highlight}</span>
-                  <a
-                    href="#contact"
-                    className="text-xs font-bold text-[#1D3F74] hover:text-[#F97316] transition-colors flex items-center gap-1 group-hover:text-[#F97316]"
-                  >
-                    Enquire Now →
+                <div className="flex items-center justify-between pt-4 border-t border-[#1E1B6B]/6">
+                  <span className="text-xs font-extrabold text-[#E8C547] bg-[#1E1B6B] px-3 py-1 rounded-lg">
+                    {c.highlight}
+                  </span>
+                  <a href="#contact" className="text-xs font-bold text-[#1E1B6B] hover:text-[#E8C547] hover:underline transition-colors">
+                    Enquire →
                   </a>
                 </div>
               </div>
@@ -165,17 +130,14 @@ export default function Courses() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.7 }}
-          className="text-center mt-12"
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ delay: 0.65 }}
+          className="text-center mt-10"
         >
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-[#0B1829] hover:bg-[#162B50] text-white font-bold rounded-2xl text-base shadow-xl transition-all hover:-translate-y-1"
-          >
+          <a href="#contact" className="inline-flex items-center gap-2.5 px-8 py-4 btn-indigo text-base rounded-xl">
             Book a Free Demo Class
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </a>
