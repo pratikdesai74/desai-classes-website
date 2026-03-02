@@ -5,11 +5,54 @@ import { useRef, useState } from "react";
 import Image from "next/image";
 
 const images = [
-  { src: "/images/class-3.jpg",       alt: "Desai Classes Institute — Established 1990",              caption: "Our Institute — Est. 1990",        span: "lg:col-span-2 lg:row-span-2" },
-  { src: "/images/classroom-main.jpg",alt: "Desai Classes main classroom",                             caption: "Modern Classrooms",               span: "" },
-  { src: "/images/class-4.jpg",       alt: "Spacious classroom at Desai Classes",                      caption: "Spacious Learning Spaces",         span: "" },
-  { src: "/images/class-5.jpg",       alt: "Air-conditioned classroom at Desai Classes",               caption: "AC-Equipped Rooms",               span: "" },
-  { src: "/images/class-1.jpg",       alt: "Well-furnished classroom with student desks",              caption: "Comfortable Environment",         span: "" },
+  {
+    src: "/images/batch-classroom-active.webp",
+    alt: "Teacher actively teaching students at Desai Classes",
+    caption: "Live Classroom — Teacher & Students",
+    span: "lg:col-span-2 lg:row-span-2",
+  },
+  {
+    src: "/images/batch-science-farewell.webp",
+    alt: "Science batch farewell 2022 at Desai Classes",
+    caption: "Science Batch Farewell 2022",
+    span: "",
+  },
+  {
+    src: "/images/batch-commerce-farewell.webp",
+    alt: "Commerce batch farewell 2025 at Desai Classes",
+    caption: "Commerce Batch Farewell 2025",
+    span: "",
+  },
+  {
+    src: "/images/batch-group-1.png",
+    alt: "Student batch group photo at Desai Classes",
+    caption: "Our Students — Batch Photo",
+    span: "",
+  },
+  {
+    src: "/images/batch-group-outdoor.webp",
+    alt: "Desai Classes student batch outdoor group photo",
+    caption: "Annual Batch Gathering",
+    span: "",
+  },
+  {
+    src: "/images/batch-group-2.png",
+    alt: "Students batch farewell group photo at Desai Classes",
+    caption: "Farewell Celebration",
+    span: "",
+  },
+  {
+    src: "/images/lab-physics-chemistry.webp",
+    alt: "Physics & Chemistry practical lab at Desai Classes since 2007",
+    caption: "Physics & Chemistry Lab — Est. 2007",
+    span: "",
+  },
+  {
+    src: "/images/classroom-main.jpg",
+    alt: "Desai Classes modern AC classroom",
+    caption: "Modern AC Classroom",
+    span: "",
+  },
 ];
 
 export default function Gallery() {
@@ -27,35 +70,35 @@ export default function Gallery() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             className="text-center max-w-xl mx-auto mb-12"
           >
-            <span className="label-dark">Our Campus</span>
+            <span className="label-dark">Our Campus &amp; Students</span>
             <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">
               Inside <span className="text-gold-gradient">Desai Classes</span>
             </h2>
             <p className="mt-3 text-white/80 text-lg">
-              Modern, air-conditioned classrooms built for focused learning and top performance.
+              Classrooms full of energy, farewell memories, and a lab that has been running since 2007.
             </p>
           </motion.div>
 
-          {/* Grid */}
+          {/* Grid — first image spans 2×2, rest fill in */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 gap-3">
             {images.map((img, i) => (
               <motion.div
                 key={img.src}
                 initial={{ opacity: 0, scale: 0.96 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ delay: i * 0.09 }}
+                transition={{ delay: i * 0.07 }}
                 className={`relative group cursor-pointer overflow-hidden rounded-2xl aspect-[4/3] ${img.span}`}
                 onClick={() => setLightbox(i)}
               >
                 <Image
                   src={img.src} alt={img.alt} fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-108"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
-                {/* Dark overlay on hover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0D0B47]/85 via-[#0D0B47]/25 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-350" />
+                {/* Hover overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0D0B47]/85 via-[#0D0B47]/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-350" />
                 {/* Caption */}
-                <div className="absolute inset-x-0 bottom-0 p-5 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <div className="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                   <p className="text-white font-bold text-sm">{img.caption}</p>
                 </div>
                 {/* Gold ring on hover */}
@@ -94,8 +137,8 @@ export default function Gallery() {
             </button>
           )}
           <motion.div key={lightbox} initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 0.2 }} className="relative max-w-5xl w-full max-h-[85vh]" onClick={(e) => e.stopPropagation()}>
-            <Image src={images[lightbox].src} alt={images[lightbox].alt} width={1200} height={800} className="rounded-2xl object-contain w-full max-h-[85vh]"/>
-            <p className="text-white/70 text-center mt-3 font-semibold text-sm">{images[lightbox].caption}</p>
+            <Image src={images[lightbox].src} alt={images[lightbox].alt} width={1400} height={900} className="rounded-2xl object-contain w-full max-h-[85vh]"/>
+            <p className="text-white/80 text-center mt-3 font-semibold text-sm">{images[lightbox].caption}</p>
           </motion.div>
         </motion.div>
       )}
