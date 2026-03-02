@@ -91,8 +91,8 @@ const jsonLd = {
   telephone: "+919822598294",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Kakade Plaza, 2nd Floor, NDA Road, Opposite Kakade City",
-    addressLocality: "Karve Nagar, Pune",
+    streetAddress: "2nd Floor, Kakade Plaza, Warje Malwadi Rd, Warje Jakat Naka",
+    addressLocality: "Karvenagar, Pune",
     addressRegion: "Maharashtra",
     postalCode: "411052",
     addressCountry: "IN",

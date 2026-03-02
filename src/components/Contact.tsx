@@ -70,9 +70,9 @@ export default function Contact() {
                   <div>
                     <div className="text-white font-bold text-sm mb-0.5">Address</div>
                     <div className="text-white/50 text-sm leading-relaxed">
-                      Kakade Plaza, 2nd Floor, NDA Road,<br />
-                      Opposite Kakade City, Karve Nagar,<br />
-                      Pune — 411052
+                      2nd Floor, Kakade Plaza,<br />
+                      Warje Malwadi Rd, Warje Jakat Naka,<br />
+                      Karvenagar, Pune — 411052
                     </div>
                   </div>
                 </div>
