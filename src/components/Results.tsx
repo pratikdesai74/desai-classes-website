@@ -63,8 +63,8 @@ const iitSelections = [
 const scienceToppers = [
   { name: "Ganesh More",      photo: "/images/topper-ganesh-more.jpg",      scores: "NEET: 587",          imgPos: "object-center" },
   { name: "Kunal More",       photo: "/images/topper-kunal-mare.jpg",       scores: "MHT-CET: 99.28%",    imgPos: "object-center" },
-  { name: "Trupti Chaudhari", photo: "/images/topper-trupti-chaudhari.jpg", scores: "PCM: 97.61%",        imgPos: "object-[center_20%]" },
-  { name: "Pranali Dongale",  photo: "/images/topper-pranali-dongale.jpg",  scores: "Maths 98 · Chem 94", imgPos: "object-center" },
+  { name: "Trupti Chaudhari", photo: "/images/topper-trupti-chaudhari.jpg", scores: "PCM: 97.61%",        imgPos: "object-[center_70%]" },
+  { name: "Pranali Dongale",  photo: "/images/topper-pranali-dongale.jpg",  scores: "Maths 98 · Chem 94", imgPos: "object-[center_20%]" },
   { name: "Kaveri Kande",     photo: "/images/topper-kaveri-kande.jpg",     scores: "Maths 98 · Bio 98",  imgPos: "object-center" },
   { name: "Pravin Kandade",   photo: "/images/topper-pravin-kandade.jpg",   scores: "Phy 99 · Maths 99",  imgPos: "object-center" },
 ];
