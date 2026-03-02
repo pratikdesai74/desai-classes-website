@@ -15,7 +15,7 @@ export default function Hero() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-20 relative z-10 w-full">
-        <div className="grid lg:grid-cols-[55%_45%] gap-10 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-[45%_55%] gap-10 lg:gap-12 items-center">
 
           {/* ── LEFT: Text ── */}
           <motion.div
@@ -96,15 +96,15 @@ export default function Hero() {
             className="hidden lg:block"
           >
             <div className="relative">
-              {/* Main image — tall portrait crop */}
-              <div className="relative aspect-[4/5] w-full rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/10">
+              {/* Main image — wide landscape to show full classroom + teacher */}
+              <div className="relative aspect-[16/11] w-full rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/10">
                 <Image
                   src="/images/classroom-hero.jpg"
                   alt="Desai Classes Classroom"
                   fill
                   priority
                   className="object-cover object-center"
-                  sizes="45vw"
+                  sizes="55vw"
                 />
                 {/* Dark gradient from bottom */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0D0B47]/75 via-transparent to-transparent" />

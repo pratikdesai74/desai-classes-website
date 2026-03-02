@@ -30,45 +30,48 @@ const stats = [
 
 const featured = [
   {
-    name: "Bharat Charan",   photo: "/images/topper-bharat-charan.jpg",
-    exam: "JEE Advanced",    score: "99.9 Percentile", sub: "AIR 155",
+    name: "Bharat Charan",    photo: "/images/topper-bharat-charan.jpg",
+    exam: "JEE Advanced",     score: "99.9 Percentile", sub: "AIR 155",
     badge: "🥇 National Topper",
     badgeBg: "bg-[#E8C547] text-[#13115A]",
     ring: "ring-[#E8C547]",
+    imgPos: "object-center",
   },
   {
-    name: "Pallavi Bharane", photo: "/images/topper-pallavi-bharne.jpg",
-    exam: "MHT-CET",         score: "99.9 Percentile", sub: "Top Scorer",
+    name: "Pallavi Bharane",  photo: "/images/topper-pallavi-bharne.jpg",
+    exam: "MHT-CET",          score: "99.9 Percentile", sub: "Top Scorer",
     badge: "🥈 CET Topper",
     badgeBg: "bg-white/20 text-white border border-white/30",
     ring: "ring-white/60",
+    imgPos: "object-center",
   },
   {
     name: "Vaishnavi Digole", photo: "/images/topper-vaishnavi-digole.jpg",
-    exam: "NEET",             score: "603 Marks",       sub: "Medical",
+    exam: "NEET",              score: "603 Marks",       sub: "Medical",
     badge: "🥉 NEET Star",
     badgeBg: "bg-[#2D2BB5] text-white",
     ring: "ring-[#4644CE]",
+    imgPos: "object-center",
   },
-];
-
-const scienceToppers = [
-  { name: "Ganesh More",      photo: "/images/topper-ganesh-more.jpg",      scores: "NEET: 587"         },
-  { name: "Kunal More",       photo: "/images/topper-kunal-mare.jpg",       scores: "MHT-CET: 99.28%"   },
-  { name: "Trupti Chaudhari", photo: "/images/topper-trupti-chaudhari.jpg", scores: "PCM: 97.61%"       },
-  { name: "Pranali Dongale",  photo: "/images/topper-pranali-dongale.jpg",  scores: "Maths 98 · Chem 94"},
-  { name: "Kaveri Kande",     photo: "/images/topper-kaveri-kande.jpg",     scores: "Maths 98 · Bio 98" },
-  { name: "Pravin Kandade",   photo: "/images/topper-pravin-kandade.jpg",   scores: "Phy 99 · Maths 99" },
-];
-
-const commerceToppers = [
-  { name: "Sejal Pawar",  photo: "/images/topper-sejal-pawar.jpg",  scores: "Accounts 99 · Eco 94 · OC 95 · Maths 91" },
-  { name: "Janhavi Ghag", photo: "/images/topper-janhavi-ghag.jpg", scores: "Accounts 94 · Eco 92 · OC 95 · SP 96"    },
 ];
 
 const iitSelections = [
   { name: "Hanumant Malkapure", college: "IIT Madras", photo: "/images/topper-hanumant-malkapure.jpg" },
   { name: "Umesh Mali",         college: "IIT Indore", photo: "/images/topper-umesh-mali.jpg" },
+];
+
+const scienceToppers = [
+  { name: "Ganesh More",      photo: "/images/topper-ganesh-more.jpg",      scores: "NEET: 587",          imgPos: "object-center" },
+  { name: "Kunal More",       photo: "/images/topper-kunal-mare.jpg",       scores: "MHT-CET: 99.28%",    imgPos: "object-center" },
+  { name: "Trupti Chaudhari", photo: "/images/topper-trupti-chaudhari.jpg", scores: "PCM: 97.61%",        imgPos: "object-[center_20%]" },
+  { name: "Pranali Dongale",  photo: "/images/topper-pranali-dongale.jpg",  scores: "Maths 98 · Chem 94", imgPos: "object-center" },
+  { name: "Kaveri Kande",     photo: "/images/topper-kaveri-kande.jpg",     scores: "Maths 98 · Bio 98",  imgPos: "object-center" },
+  { name: "Pravin Kandade",   photo: "/images/topper-pravin-kandade.jpg",   scores: "Phy 99 · Maths 99",  imgPos: "object-center" },
+];
+
+const commerceToppers = [
+  { name: "Sejal Pawar",  photo: "/images/topper-sejal-pawar.jpg",  scores: "Accounts 99 · Eco 94 · OC 95 · Maths 91" },
+  { name: "Janhavi Ghag", photo: "/images/topper-janhavi-ghag.jpg", scores: "Accounts 94 · Eco 92 · OC 95 · SP 96"    },
 ];
 
 export default function Results() {
@@ -85,11 +88,11 @@ export default function Results() {
           <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
             Hall of <span className="text-gold-gradient">Champions</span>
           </h2>
-          <p className="mt-3 text-white/75 text-lg">Real students. Real results. Our toppers speak louder than any advertisement.</p>
+          <p className="mt-3 text-white/80 text-lg">Real students. Real results. Our toppers speak louder than any advertisement.</p>
         </motion.div>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-14">
           {stats.map((s, i) => (
             <motion.div
               key={s.label}
@@ -107,88 +110,114 @@ export default function Results() {
           ))}
         </div>
 
-        {/* IIT Banner */}
+        {/* ═══ FEATURED ACHIEVERS ═══ */}
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.15 }}
-          className="mb-12 bg-[#E8C547]/12 border border-[#E8C547]/30 rounded-3xl p-6 sm:p-8"
+          transition={{ delay: 0.1 }}
+          className="mb-14"
         >
-          <div className="flex flex-col sm:flex-row items-center gap-6">
-            <div className="text-center sm:text-left flex-shrink-0">
-              <div className="text-[#E8C547] font-extrabold text-5xl">30+</div>
-              <div className="text-white/80 text-sm font-semibold">Students in IITs / NITs</div>
-            </div>
-            <div className="w-px h-14 bg-[#E8C547]/25 hidden sm:block" />
-            <div className="flex-1">
-              <div className="text-white font-extrabold text-base mb-3">IIT Selections</div>
-              <div className="flex flex-wrap gap-3">
-                {iitSelections.map(s => (
-                  <div key={s.name} className="flex items-center gap-3 bg-white/10 border border-white/15 rounded-2xl px-4 py-2.5">
-                    <div className="relative w-14 h-14 rounded-full overflow-hidden ring-2 ring-[#E8C547]/70 flex-shrink-0">
-                      <Image src={s.photo} alt={s.name} fill className="object-cover object-top" sizes="56px" />
+          <div className="flex items-center gap-3 mb-7">
+            <div className="h-px flex-1 bg-gradient-to-r from-transparent to-[#E8C547]/40" />
+            <span className="text-[#E8C547] font-extrabold text-sm uppercase tracking-[0.2em] px-4">⭐ Featured Achievers</span>
+            <div className="h-px flex-1 bg-gradient-to-l from-transparent to-[#E8C547]/40" />
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-5">
+            {featured.map((t, i) => (
+              <motion.div
+                key={t.name}
+                initial={{ opacity: 0, y: 32 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: 0.18 + i * 0.12 }}
+                className={`relative rounded-3xl overflow-hidden border-2 shadow-2xl group ${t.ring}`}
+              >
+                <div className="relative w-full aspect-[3/4] overflow-hidden">
+                  <Image src={t.photo} alt={t.name} fill className={`object-cover ${t.imgPos} transition-transform duration-500 group-hover:scale-105`} sizes="(max-width: 768px) 100vw, 33vw" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0D0B47] via-[#0D0B47]/30 to-transparent" />
+                  <span className={`absolute top-4 left-4 text-xs font-extrabold px-3 py-1.5 rounded-full shadow-lg ${t.badgeBg}`}>{t.badge}</span>
+                  <div className="absolute bottom-0 left-0 right-0 p-5">
+                    <div className="text-white font-extrabold text-xl leading-tight">{t.name}</div>
+                    <div className="text-white/75 text-sm mt-0.5">{t.exam}</div>
+                    <div className="mt-3 bg-black/30 backdrop-blur-sm border border-white/20 rounded-xl p-3">
+                      <div className="text-[#E8C547] font-extrabold text-2xl">{t.score}</div>
+                      <div className="text-white/85 text-sm font-semibold mt-0.5">{t.sub}</div>
                     </div>
-                    <div>
-                      <div className="text-white font-bold text-sm">{s.name}</div>
-                      <div className="text-[#E8C547] text-xs font-bold">{s.college}</div>
-                    </div>
-                  </div>
-                ))}
-                <div className="flex items-center gap-3 bg-white/10 border border-white/15 rounded-2xl px-4 py-2.5">
-                  <div className="w-14 h-14 rounded-full bg-[#E8C547]/20 flex items-center justify-center text-[#E8C547] font-extrabold text-xl">+</div>
-                  <div>
-                    <div className="text-white font-bold text-sm">Many More</div>
-                    <div className="text-white/70 text-xs">NITs · COEP · Govt Colleges</div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
 
-        {/* Featured Toppers — Full portrait cards */}
-        <div className="flex items-center gap-3 mb-6">
-          <div className="h-px flex-1 bg-gradient-to-r from-transparent to-[#E8C547]/35" />
-          <span className="text-[#E8C547] font-extrabold text-xs uppercase tracking-[0.2em] px-4">Featured Achievers</span>
-          <div className="h-px flex-1 bg-gradient-to-l from-transparent to-[#E8C547]/35" />
-        </div>
+        {/* ═══ IIT SELECTIONS — HIGHLIGHTED ═══ */}
+        <motion.div
+          initial={{ opacity: 0, y: 18 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: 0.3 }}
+          className="mb-14"
+        >
+          {/* Section header */}
+          <div className="flex items-center gap-3 mb-7">
+            <div className="h-px flex-1 bg-gradient-to-r from-transparent to-[#E8C547]/40" />
+            <span className="text-[#E8C547] font-extrabold text-sm uppercase tracking-[0.2em] px-4">🏆 IIT Selections</span>
+            <div className="h-px flex-1 bg-gradient-to-l from-transparent to-[#E8C547]/40" />
+          </div>
 
-        <div className="grid md:grid-cols-3 gap-5 mb-12">
-          {featured.map((t, i) => (
-            <motion.div
-              key={t.name}
-              initial={{ opacity: 0, y: 32 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.22 + i * 0.12 }}
-              className="relative bg-white/8 border border-white/12 rounded-3xl overflow-hidden hover:bg-white/12 hover:border-[#E8C547]/40 transition-all group"
-            >
-              {/* Large portrait photo */}
-              <div className={`relative w-full aspect-[3/4] overflow-hidden ring-0 group-hover:ring-2 ${t.ring} transition-all duration-300`}>
-                <Image src={t.photo} alt={t.name} fill className="object-cover object-top" sizes="(max-width: 768px) 100vw, 33vw" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0D0B47]/90 via-[#0D0B47]/20 to-transparent" />
-                {/* Badge at top */}
-                <span className={`absolute top-4 left-4 text-xs font-extrabold px-3 py-1.5 rounded-full ${t.badgeBg}`}>{t.badge}</span>
-                {/* Info overlay at bottom */}
-                <div className="absolute bottom-0 left-0 right-0 p-5">
-                  <div className="text-white font-extrabold text-xl leading-tight">{t.name}</div>
-                  <div className="text-white/75 text-sm mt-0.5">{t.exam}</div>
-                  <div className="mt-3 bg-white/15 backdrop-blur-sm border border-white/15 rounded-xl p-3">
-                    <div className="text-[#E8C547] font-extrabold text-2xl">{t.score}</div>
-                    <div className="text-white/80 text-sm font-semibold mt-0.5">{t.sub}</div>
+          {/* Gold banner headline */}
+          <div className="text-center mb-8 bg-[#E8C547]/10 border border-[#E8C547]/30 rounded-2xl py-5 px-6">
+            <div className="text-[#E8C547] font-extrabold text-5xl sm:text-6xl leading-none">30+</div>
+            <div className="text-white font-bold text-lg mt-1">Students Placed in IITs &amp; NITs</div>
+            <div className="text-white/65 text-sm mt-1">Including IIT Madras · IIT Indore · NIT Pune · COEP</div>
+          </div>
+
+          {/* Large portrait cards */}
+          <div className="grid grid-cols-3 gap-5">
+            {iitSelections.map((s, i) => (
+              <motion.div
+                key={s.name}
+                initial={{ opacity: 0, y: 28 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: 0.35 + i * 0.12 }}
+                className="relative rounded-3xl overflow-hidden border-2 border-[#E8C547]/50 shadow-2xl shadow-yellow-900/30 group hover:border-[#E8C547] transition-all"
+              >
+                <div className="relative w-full aspect-[3/4] overflow-hidden">
+                  <Image src={s.photo} alt={s.name} fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 768px) 50vw, 33vw" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0D0B47]/95 via-[#0D0B47]/20 to-transparent" />
+                  <div className="absolute top-3 left-3 bg-[#E8C547] text-[#13115A] text-[10px] font-extrabold px-2.5 py-1 rounded-full">IIT</div>
+                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <div className="text-white font-extrabold text-lg leading-tight">{s.name}</div>
+                    <div className="text-[#E8C547] font-bold text-sm mt-1">{s.college}</div>
                   </div>
                 </div>
+              </motion.div>
+            ))}
+
+            {/* "Many More" card */}
+            <motion.div
+              initial={{ opacity: 0, y: 28 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.59 }}
+              className="relative rounded-3xl overflow-hidden border-2 border-[#E8C547]/30 group hover:border-[#E8C547]/60 transition-all"
+            >
+              <div className="relative w-full aspect-[3/4] bg-gradient-to-b from-[#1E1B6B] to-[#0D0B47] flex flex-col items-center justify-center p-6 text-center">
+                <div className="w-16 h-16 rounded-full bg-[#E8C547]/20 border-2 border-[#E8C547]/50 flex items-center justify-center mb-4">
+                  <span className="text-[#E8C547] font-extrabold text-2xl">+</span>
+                </div>
+                <div className="text-white font-extrabold text-xl mb-2">Many More</div>
+                <div className="text-white/70 text-sm leading-relaxed">NITs · COEP<br />Govt. Engineering<br />&amp; Medical Colleges</div>
               </div>
             </motion.div>
-          ))}
-        </div>
+          </div>
+        </motion.div>
 
-        {/* Science Toppers */}
+        {/* ═══ SCIENCE TOPPERS ═══ */}
         <div className="flex items-center gap-3 mb-5">
           <div className="h-px flex-1 bg-gradient-to-r from-transparent to-blue-400/35" />
           <span className="text-blue-300 font-extrabold text-xs uppercase tracking-[0.2em] px-4">Science Toppers</span>
           <div className="h-px flex-1 bg-gradient-to-l from-transparent to-blue-400/35" />
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-10">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
           {scienceToppers.map((t, i) => (
             <motion.div
               key={t.name}
@@ -198,7 +227,11 @@ export default function Results() {
               className="bg-white/8 border border-white/12 rounded-2xl overflow-hidden hover:bg-white/14 hover:border-blue-400/40 transition-all group"
             >
               <div className="relative w-full aspect-square overflow-hidden">
-                <Image src={t.photo} alt={t.name} fill className="object-cover object-top transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 17vw" />
+                <Image
+                  src={t.photo} alt={t.name} fill
+                  className={`object-cover ${t.imgPos} transition-transform duration-500 group-hover:scale-105`}
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 17vw"
+                />
               </div>
               <div className="p-3 text-center">
                 <div className="text-white font-bold text-xs mb-1 leading-tight">{t.name}</div>
@@ -208,13 +241,13 @@ export default function Results() {
           ))}
         </div>
 
-        {/* Commerce Toppers */}
+        {/* ═══ COMMERCE TOPPERS ═══ */}
         <div className="flex items-center gap-3 mb-5">
           <div className="h-px flex-1 bg-gradient-to-r from-transparent to-emerald-400/35" />
           <span className="text-emerald-300 font-extrabold text-xs uppercase tracking-[0.2em] px-4">Commerce Toppers</span>
           <div className="h-px flex-1 bg-gradient-to-l from-transparent to-emerald-400/35" />
         </div>
-        <div className="grid sm:grid-cols-2 gap-4 max-w-xl mb-10">
+        <div className="grid sm:grid-cols-2 gap-5 max-w-xl mb-10">
           {commerceToppers.map((t, i) => (
             <motion.div
               key={t.name}
@@ -223,12 +256,16 @@ export default function Results() {
               transition={{ delay: 0.68 + i * 0.1 }}
               className="bg-white/8 border border-white/12 rounded-2xl overflow-hidden hover:bg-white/14 hover:border-emerald-400/40 transition-all group"
             >
-              <div className="relative w-full aspect-[4/3] overflow-hidden">
-                <Image src={t.photo} alt={t.name} fill className="object-cover object-top transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 50vw" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0D0B47]/85 via-transparent to-transparent" />
+              <div className="relative w-full aspect-[3/4] overflow-hidden">
+                <Image
+                  src={t.photo} alt={t.name} fill
+                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0D0B47]/90 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <div className="text-white font-bold text-sm">{t.name}</div>
-                  <div className="text-emerald-300 text-xs font-semibold mt-0.5">{t.scores}</div>
+                  <div className="text-white font-bold text-base">{t.name}</div>
+                  <div className="text-emerald-300 text-xs font-semibold mt-1 leading-relaxed">{t.scores}</div>
                 </div>
               </div>
             </motion.div>
@@ -239,11 +276,11 @@ export default function Results() {
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.8 }}
+          transition={{ delay: 0.85 }}
           className="bg-white/8 border border-[#E8C547]/20 rounded-3xl p-8 text-center"
         >
           <div className="text-[#E8C547] text-5xl font-serif mb-3">&ldquo;</div>
-          <p className="text-white/85 text-lg max-w-3xl mx-auto leading-relaxed italic">
+          <p className="text-white/90 text-lg max-w-3xl mx-auto leading-relaxed italic">
             Our students consistently secure top ranks in HSC Board exams, MHT-CET, JEE, and NEET.
             Every student has the potential to succeed — they just need the right guidance.
           </p>
