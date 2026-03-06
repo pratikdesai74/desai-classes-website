@@ -7,6 +7,7 @@ import Facilities from "@/components/Facilities";
 import Gallery from "@/components/Gallery";
 import Results from "@/components/Results";
 import Testimonials from "@/components/Testimonials";
+import VideoTestimonials from "@/components/VideoTestimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
@@ -23,6 +24,7 @@ export default function Home() {
       <Facilities />
       <Gallery />
       <Testimonials />
+      <VideoTestimonials />
       <Contact />
       <Footer />
       <FloatingCTA />
