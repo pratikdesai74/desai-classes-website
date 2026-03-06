@@ -56,22 +56,26 @@ const featured = [
 ];
 
 const iitSelections = [
-  { name: "Hanumant Malkapure", college: "IIT Madras", photo: "/images/topper-hanumant-malkapure.jpg" },
-  { name: "Umesh Mali",         college: "IIT Indore", photo: "/images/topper-umesh-mali.jpg" },
+  { name: "Hanumant Malkapure", college: "IIT Madras",    photo: "/images/topper-hanumant-malkapure.jpg", badge: "IIT" },
+  { name: "Umesh Mali",         college: "IIT Indore",    photo: "/images/topper-umesh-mali.jpg",         badge: "IIT" },
+  { name: "Sonali Pawar",       college: "Young Scientist · ISSRF 2025", photo: "/images/topper-sonali-pawar.jpg", badge: "🏅" },
 ];
 
 const scienceToppers = [
-  { name: "Ganesh More",      photo: "/images/topper-ganesh-more.jpg",      scores: "NEET: 587",          imgPos: "object-center" },
-  { name: "Kunal More",       photo: "/images/topper-kunal-mare.jpg",       scores: "MHT-CET: 99.28%",    imgPos: "object-center" },
-  { name: "Trupti Chaudhari", photo: "/images/topper-trupti-chaudhari.jpg", scores: "PCM: 97.61%",        imgPos: "object-[center_70%]" },
-  { name: "Pranali Dongale",  photo: "/images/topper-pranali-dongale.jpg",  scores: "Maths 98 · Chem 94", imgPos: "object-[center_20%]" },
-  { name: "Kaveri Kande",     photo: "/images/topper-kaveri-kande.jpg",     scores: "Maths 98 · Bio 98",  imgPos: "object-center" },
-  { name: "Pravin Kandade",   photo: "/images/topper-pravin-kandade.jpg",   scores: "Phy 99 · Maths 99",  imgPos: "object-center" },
+  { name: "Ganesh More",      photo: "/images/topper-ganesh-more.jpg",      scores: "NEET: 587",              imgPos: "object-center" },
+  { name: "Kunal More",       photo: "/images/topper-kunal-mare.jpg",       scores: "MHT-CET: 99.28%",        imgPos: "object-center" },
+  { name: "Dhruva Kakade",    photo: null,                                   scores: "MHT-CET: 99.09%",        imgPos: "object-center" },
+  { name: "Sakshi Kadu",      photo: "/images/topper-sakshi-kadu.jpg",      scores: "Phy 99 · Chem 98 · Bio 97", imgPos: "object-center" },
+  { name: "Trupti Chaudhari", photo: "/images/topper-trupti-chaudhari.jpg", scores: "PCM: 97.61%",            imgPos: "object-[center_70%]" },
+  { name: "Pranali Dongale",  photo: "/images/topper-pranali-dongale.jpg",  scores: "Maths 98 · Chem 94",     imgPos: "object-[center_20%]" },
+  { name: "Kaveri Kande",     photo: "/images/topper-kaveri-kande.jpg",     scores: "Maths 98 · Bio 98",      imgPos: "object-center" },
+  { name: "Pravin Kandade",   photo: "/images/topper-pravin-kandade.jpg",   scores: "Phy 99 · Maths 99",      imgPos: "object-center" },
 ];
 
 const commerceToppers = [
-  { name: "Sejal Pawar",  photo: "/images/topper-sejal-pawar.jpg",  scores: "Accounts 99 · Eco 94 · OC 95 · Maths 91" },
-  { name: "Janhavi Ghag", photo: "/images/topper-janhavi-ghag.jpg", scores: "Accounts 94 · Eco 92 · OC 95 · SP 96"    },
+  { name: "Sejal Pawar",        photo: "/images/topper-sejal-pawar.jpg",         scores: "Accounts 99 · Eco 94 · OC 95 · Maths 91" },
+  { name: "Janhavi Ghag",       photo: "/images/topper-janhavi-ghag.jpg",        scores: "Accounts 94 · Eco 92 · OC 95 · SP 96"    },
+  { name: "Yugandhara Halkare", photo: "/images/topper-yugandhara-halkare.jpg",  scores: "Eco 90 · Accounts 82 · SP 87"            },
 ];
 
 export default function Results() {
@@ -172,22 +176,22 @@ export default function Results() {
           </div>
 
           {/* Large portrait cards */}
-          <div className="grid grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
             {iitSelections.map((s, i) => (
               <motion.div
                 key={s.name}
                 initial={{ opacity: 0, y: 28 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.35 + i * 0.12 }}
-                className="relative rounded-3xl overflow-hidden border-2 border-[#E8C547]/50 shadow-2xl shadow-yellow-900/30 group hover:border-[#E8C547] transition-all"
+                className="relative rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-[#E8C547]/50 shadow-2xl shadow-yellow-900/30 group hover:border-[#E8C547] transition-all"
               >
-                <div className="relative w-full aspect-[3/4] overflow-hidden">
-                  <Image src={s.photo} alt={s.name} fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 768px) 50vw, 33vw" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0D0B47]/95 via-[#0D0B47]/20 to-transparent" />
-                  <div className="absolute top-3 left-3 bg-[#E8C547] text-[#13115A] text-[10px] font-extrabold px-2.5 py-1 rounded-full">IIT</div>
-                  <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <div className="text-white font-extrabold text-lg leading-tight">{s.name}</div>
-                    <div className="text-[#E8C547] font-bold text-sm mt-1">{s.college}</div>
+                <div className="relative w-full aspect-[3/4] sm:aspect-[3/4] overflow-hidden">
+                  <Image src={s.photo} alt={s.name} fill className="object-cover object-top transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 25vw" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0D0B47] via-[#0D0B47]/30 to-transparent" />
+                  <div className="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 bg-[#E8C547] text-[#13115A] text-[9px] sm:text-[10px] font-extrabold px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full">{s.badge}</div>
+                  <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
+                    <div className="text-white font-extrabold text-sm sm:text-base lg:text-lg leading-tight">{s.name}</div>
+                    <div className="text-[#E8C547] font-bold text-xs sm:text-sm mt-0.5 sm:mt-1 leading-snug">{s.college}</div>
                   </div>
                 </div>
               </motion.div>
@@ -198,14 +202,14 @@ export default function Results() {
               initial={{ opacity: 0, y: 28 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.59 }}
-              className="relative rounded-3xl overflow-hidden border-2 border-[#E8C547]/30 group hover:border-[#E8C547]/60 transition-all"
+              className="relative rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-[#E8C547]/30 group hover:border-[#E8C547]/60 transition-all"
             >
-              <div className="relative w-full aspect-[3/4] bg-gradient-to-b from-[#1E1B6B] to-[#0D0B47] flex flex-col items-center justify-center p-6 text-center">
-                <div className="w-16 h-16 rounded-full bg-[#E8C547]/20 border-2 border-[#E8C547]/50 flex items-center justify-center mb-4">
-                  <span className="text-[#E8C547] font-extrabold text-2xl">+</span>
+              <div className="relative w-full aspect-[3/4] bg-gradient-to-b from-[#1E1B6B] to-[#0D0B47] flex flex-col items-center justify-center p-4 sm:p-6 text-center">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#E8C547]/20 border-2 border-[#E8C547]/50 flex items-center justify-center mb-3 sm:mb-4">
+                  <span className="text-[#E8C547] font-extrabold text-xl sm:text-2xl">+</span>
                 </div>
-                <div className="text-white font-extrabold text-xl mb-2">Many More</div>
-                <div className="text-white/70 text-sm leading-relaxed">NITs · COEP<br />Govt. Engineering<br />&amp; Medical Colleges</div>
+                <div className="text-white font-extrabold text-base sm:text-xl mb-1 sm:mb-2">Many More</div>
+                <div className="text-white/70 text-xs sm:text-sm leading-relaxed">NITs · COEP<br />Govt. Engineering<br />&amp; Medical Colleges</div>
               </div>
             </motion.div>
           </div>
@@ -217,7 +221,7 @@ export default function Results() {
           <span className="text-blue-300 font-extrabold text-xs uppercase tracking-[0.2em] px-4">Science Toppers</span>
           <div className="h-px flex-1 bg-gradient-to-l from-transparent to-blue-400/35" />
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
+        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 xl:grid-cols-8 gap-3 sm:gap-4 mb-12">
           {scienceToppers.map((t, i) => (
             <motion.div
               key={t.name}
@@ -227,15 +231,21 @@ export default function Results() {
               className="bg-white/8 border border-white/12 rounded-2xl overflow-hidden hover:bg-white/14 hover:border-blue-400/40 transition-all group"
             >
               <div className="relative w-full aspect-square overflow-hidden">
-                <Image
-                  src={t.photo} alt={t.name} fill
-                  className={`object-cover ${t.imgPos} transition-transform duration-500 group-hover:scale-105`}
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 17vw"
-                />
+                {t.photo ? (
+                  <Image
+                    src={t.photo} alt={t.name} fill
+                    className={`object-cover ${t.imgPos} transition-transform duration-500 group-hover:scale-105`}
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 13vw"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-gradient-to-br from-[#1D3F74] to-[#0B1829] flex items-center justify-center">
+                    <span className="text-white/60 font-extrabold text-3xl">{t.name.charAt(0)}</span>
+                  </div>
+                )}
               </div>
-              <div className="p-3 text-center">
-                <div className="text-white font-bold text-xs mb-1 leading-tight">{t.name}</div>
-                <div className="text-blue-300 text-[10px] font-semibold leading-tight">{t.scores}</div>
+              <div className="p-2.5 sm:p-3 text-center">
+                <div className="text-white font-bold text-xs mb-0.5 sm:mb-1 leading-tight">{t.name}</div>
+                <div className="text-blue-300 text-[9px] sm:text-[10px] font-semibold leading-tight">{t.scores}</div>
               </div>
             </motion.div>
           ))}
@@ -247,7 +257,7 @@ export default function Results() {
           <span className="text-emerald-300 font-extrabold text-xs uppercase tracking-[0.2em] px-4">Commerce Toppers</span>
           <div className="h-px flex-1 bg-gradient-to-l from-transparent to-emerald-400/35" />
         </div>
-        <div className="grid sm:grid-cols-2 gap-5 max-w-xl mb-10">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-5 max-w-2xl mb-10">
           {commerceToppers.map((t, i) => (
             <motion.div
               key={t.name}
@@ -260,7 +270,7 @@ export default function Results() {
                 <Image
                   src={t.photo} alt={t.name} fill
                   className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 640px) 100vw, 50vw"
+                  sizes="(max-width: 640px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0D0B47]/90 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">

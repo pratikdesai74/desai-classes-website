@@ -75,7 +75,7 @@ export default function Footer() {
       <div className="border-t border-white/6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-white/65 text-xs">&copy; {new Date().getFullYear()} Desai Classes, Pune. All rights reserved.</p>
-          <p className="text-white/65 text-xs">2nd Floor, Kakade Plaza, Warje Malwadi Rd, Warje Jakat Naka, Karvenagar, Pune — 411052</p>
+          <p className="text-white/65 text-xs">Office No 231, 2nd Floor, Kakade Plaza, Opposite to Kakade City, NDA Road, Karvenagar, Pune — 411052</p>
         </div>
       </div>
     </footer>

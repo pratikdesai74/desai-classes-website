@@ -111,7 +111,7 @@ export default function Hero() {
                 {/* Address label at bottom */}
                 <div className="absolute bottom-5 left-5 right-5 bg-white/10 backdrop-blur-md border border-white/15 rounded-xl px-4 py-3">
                   <div className="text-white font-bold text-sm">Desai Classes, Karvenagar, Pune</div>
-                  <div className="text-white/55 text-xs mt-0.5">2nd Floor, Kakade Plaza, Warje Malwadi Rd, Warje Jakat Naka</div>
+                  <div className="text-white/55 text-xs mt-0.5">Office No 231, 2nd Floor, Kakade Plaza, Opp. Kakade City, NDA Road</div>
                 </div>
               </div>
 

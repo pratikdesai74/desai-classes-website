@@ -70,8 +70,8 @@ export default function Contact() {
                   <div>
                     <div className="text-white font-bold text-sm mb-0.5">Address</div>
                     <div className="text-white/50 text-sm leading-relaxed">
-                      2nd Floor, Kakade Plaza,<br />
-                      Warje Malwadi Rd, Warje Jakat Naka,<br />
+                      Office No 231, 2nd Floor, Kakade Plaza,<br />
+                      Opposite to Kakade City, NDA Road,<br />
                       Karvenagar, Pune — 411052
                     </div>
                   </div>
