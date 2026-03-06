@@ -172,7 +172,7 @@ export default function Results() {
           <div className="text-center mb-8 bg-[#E8C547]/10 border border-[#E8C547]/30 rounded-2xl py-5 px-6">
             <div className="text-[#E8C547] font-extrabold text-5xl sm:text-6xl leading-none">30+</div>
             <div className="text-white font-bold text-lg mt-1">Students Placed in IITs &amp; NITs</div>
-            <div className="text-white/65 text-sm mt-1">Including IIT Madras · IIT Indore · NIT Pune · COEP</div>
+            <div className="text-white/65 text-sm mt-1">Including IIT Madras · IIT Indore · Various NITs · COEP Pune</div>
           </div>
 
           {/* Large portrait cards */}
