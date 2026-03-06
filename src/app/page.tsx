@@ -19,12 +19,12 @@ export default function Home() {
       <Hero />
       <About />
       <Results />
+      <Testimonials />
+      <VideoTestimonials />
       <Courses />
       <BatchTimings />
       <Facilities />
       <Gallery />
-      <Testimonials />
-      <VideoTestimonials />
       <Contact />
       <Footer />
       <FloatingCTA />
