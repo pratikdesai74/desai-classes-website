@@ -238,7 +238,7 @@ export default function Results() {
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 13vw"
                   />
                 ) : (
-                  <div className="w-full h-full bg-gradient-to-br from-[#1D3F74] to-[#0B1829] flex items-center justify-center">
+                  <div className="w-full h-full bg-gradient-to-br from-[#190B62] to-[#0D0740] flex items-center justify-center">
                     <span className="text-white/60 font-extrabold text-3xl">{t.name.charAt(0)}</span>
                   </div>
                 )}

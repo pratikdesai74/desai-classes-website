@@ -39,14 +39,14 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20 md:h-[100px]">
 
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-0 flex-shrink-0">
-            <div className="relative h-[84px] w-[360px] overflow-hidden rounded-xl bg-white shadow-md">
+          <a href="#home" className="flex items-center flex-shrink-0">
+            <div className="relative h-[60px] w-[283px] overflow-hidden rounded-xl shadow-md">
               <Image
-                src="/images/logo.png"
+                src="/images/logo.svg"
                 alt="Desai Classes — Since 1990"
                 fill
                 className="object-cover object-left"
-                sizes="360px"
+                sizes="283px"
                 priority
               />
             </div>

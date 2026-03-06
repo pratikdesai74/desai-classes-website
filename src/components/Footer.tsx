@@ -11,8 +11,8 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="mb-5">
-              <div className="relative h-14 w-[240px] overflow-hidden rounded-xl bg-white shadow-md">
-                <Image src="/images/logo.png" alt="Desai Classes" fill className="object-cover object-left" sizes="240px" />
+              <div className="relative h-[50px] w-[235px] overflow-hidden rounded-xl shadow-md">
+                <Image src="/images/logo.svg" alt="Desai Classes" fill className="object-cover object-left" sizes="235px" />
               </div>
             </div>
             <p className="text-white/75 max-w-sm leading-relaxed text-sm">

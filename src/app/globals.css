@@ -8,12 +8,12 @@
 ═══════════════════════════════════════════════════ */
 
 :root {
-  /* ── Brand Indigo (from logo) ── */
-  --indigo-deepest: #0D0B47;   /* Hero/darkest backgrounds */
-  --indigo-dark:    #13115A;   /* Dark section bg */
-  --indigo:         #1E1B6B;   /* Logo primary — nav, cards, accents */
-  --indigo-mid:     #2D2BB5;   /* Hover, bright accents */
-  --indigo-bright:  #4644CE;   /* Links, interactive */
+  /* ── Brand Indigo (from logo #190B62) ── */
+  --indigo-deepest: #0D0740;   /* Hero/darkest backgrounds */
+  --indigo-dark:    #130952;   /* Dark section bg */
+  --indigo:         #190B62;   /* Logo primary — nav, cards, accents */
+  --indigo-mid:     #2D1AAA;   /* Hover, bright accents */
+  --indigo-bright:  #4530CE;   /* Links, interactive */
 
   /* ── Achievement Gold ── */
   --gold:           #E8C547;   /* CTAs, highlights, stars */
@@ -86,19 +86,19 @@ html { scroll-behavior: smooth; }
 /* Hero / main dark sections — matches logo
    NOTE: dot pattern is baked in so it cannot be overridden by a second class */
 .hero-bg {
-  background-color: #0D0B47;
+  background-color: #0D0740;
   background-image:
     radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
-    linear-gradient(145deg, #0D0B47 0%, #13115A 40%, #1E1B6B 80%, #252391 100%);
+    linear-gradient(145deg, #0D0740 0%, #130952 40%, #190B62 80%, #220E80 100%);
   background-size: 28px 28px, cover;
 }
 
 /* Alternate dark sections — dot pattern baked in */
 .dark-bg {
-  background-color: #0D0B47;
+  background-color: #0D0740;
   background-image:
     radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
-    linear-gradient(160deg, #0D0B47 0%, #13115A 55%, #1B196A 100%);
+    linear-gradient(160deg, #0D0740 0%, #130952 55%, #190B62 100%);
   background-size: 28px 28px, cover;
 }
 
