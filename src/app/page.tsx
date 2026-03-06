@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import SocialProofBar from "@/components/SocialProofBar";
 import Courses from "@/components/Courses";
 import BatchTimings from "@/components/BatchTimings";
 import Facilities from "@/components/Facilities";
@@ -17,6 +18,7 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
+      <SocialProofBar />
       <About />
       <Results />
       <Testimonials />
