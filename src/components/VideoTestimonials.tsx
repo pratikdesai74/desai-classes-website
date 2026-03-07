@@ -6,6 +6,7 @@ import { useRef } from "react";
 const videos = [
   { src: "/videos/testimonial-1.mp4", label: "Student Testimonial" },
   { src: "/videos/testimonial-2.mp4", label: "Student Testimonial" },
+  { src: "/videos/testimonial-3.mp4", label: "Student Testimonial" },
 ];
 
 export default function VideoTestimonials() {
@@ -32,8 +33,8 @@ export default function VideoTestimonials() {
           </p>
         </motion.div>
 
-        {/* Phone-frame cards */}
-        <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
+        {/* Phone-frame cards — horizontal scroll on mobile, row on desktop */}
+        <div className="flex flex-row gap-6 justify-start lg:justify-center items-start overflow-x-auto pb-4 lg:overflow-visible snap-x snap-mandatory px-2">
           {videos.map((v, i) => (
             <motion.div
               key={i}
@@ -44,7 +45,7 @@ export default function VideoTestimonials() {
             >
               {/* Phone frame */}
               <div
-                className="relative bg-[#0D0740] rounded-[2.5rem] p-2.5 shadow-2xl border-4 border-[#190B62] w-64 sm:w-72"
+                className="relative bg-[#0D0740] rounded-[2.5rem] p-2.5 shadow-2xl border-4 border-[#190B62] w-60 flex-shrink-0 snap-center"
                 style={{ boxShadow: "0 0 0 2px #0D0740, 0 25px 60px rgba(13,7,64,0.5)" }}
               >
                 {/* Top notch */}

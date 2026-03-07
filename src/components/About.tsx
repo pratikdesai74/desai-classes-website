@@ -71,18 +71,18 @@ export default function About() {
           >
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/classroom-main.jpg"
-                alt="Inside Desai Classes classroom"
+                src="/images/students-batch.jpg"
+                alt="Desai Classes students batch photo"
                 fill
-                className="object-cover"
+                className="object-cover object-[center_30%]"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0D0B47]/70 via-[#0D0B47]/15 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0D0740]/80 via-[#0D0740]/10 to-transparent" />
               <div className="absolute bottom-5 left-6 right-6">
-                <div className="text-white font-extrabold text-lg">Modern Classrooms</div>
-                <div className="text-white/60 text-sm mt-0.5">AC · Smartboards · Designed for focused learning</div>
+                <div className="text-white font-extrabold text-lg">10,000+ Students Mentored</div>
+                <div className="text-white/60 text-sm mt-0.5">A legacy of trust built over 35+ years</div>
               </div>
-              <div className="absolute top-5 right-5 bg-[#E8C547] text-[#13115A] rounded-xl px-4 py-2 text-sm font-extrabold shadow-lg">
+              <div className="absolute top-5 right-5 bg-[#E8C547] text-[#130952] rounded-xl px-4 py-2 text-sm font-extrabold shadow-lg">
                 Est. 1990
               </div>
             </div>

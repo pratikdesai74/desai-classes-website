@@ -99,11 +99,11 @@ export default function Hero() {
               {/* Main image — wide landscape to show full classroom + teacher */}
               <div className="relative aspect-[16/11] w-full rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/10">
                 <Image
-                  src="/images/classroom-hero.jpg"
-                  alt="Desai Classes — Students in classroom"
+                  src="/images/classroom-packed.jpg"
+                  alt="Desai Classes — Packed classroom with students"
                   fill
                   priority
-                  className="object-cover object-center"
+                  className="object-cover object-[center_30%]"
                   sizes="55vw"
                 />
                 {/* Dark gradient from bottom */}
