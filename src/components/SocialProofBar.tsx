@@ -8,7 +8,7 @@ const items = [
   { label: "IIT Indore",      name: "Umesh Mali",         icon: "🏛️" },
   { label: "CET 99.28%",      name: "Kunal More",         icon: "⭐" },
   { label: "NEET 587",        name: "Ganesh More",        icon: "🏥" },
-  { label: "4.8★ Google",     name: "210+ Reviews",       icon: "⭐" },
+  { label: "4.9★ Google",     name: "210+ Reviews",       icon: "⭐" },
   { label: "30+ IIT & NITs",  name: "Our Students",       icon: "🏆" },
   { label: "35+ Years",       name: "Of Excellence",      icon: "🎓" },
   { label: "Phy·Chem·Bio 99", name: "Sakshi Kadu",        icon: "✨" },

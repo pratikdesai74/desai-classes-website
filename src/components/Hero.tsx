@@ -72,7 +72,7 @@ export default function Hero() {
               {[
                 { num: "35+",     label: "Years of\nExcellence" },
                 { num: "10,000+", label: "Students\nMentored" },
-                { num: "4.8 ★",   label: "Google\nRating" },
+                { num: "4.9 ★",   label: "Google\nRating" },
               ].map((s, i) => (
                 <motion.div
                   key={s.label}

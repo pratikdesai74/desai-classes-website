@@ -20,7 +20,7 @@ export default function Footer() {
               35+ years of academic excellence — building toppers, shaping futures.
             </p>
             <div className="mt-5 flex flex-wrap gap-2">
-              {["⭐ 4.8/5 Rating", "🎓 210+ Reviews", "🏆 JEE AIR 155"].map(b => (
+              {["⭐ 4.9/5 Rating", "🎓 210+ Reviews", "🏆 JEE AIR 155"].map(b => (
                 <span key={b} className="text-xs font-semibold text-white/85 bg-white/12 border border-white/20 rounded-full px-3 py-1.5">{b}</span>
               ))}
             </div>

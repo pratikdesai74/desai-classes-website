@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://desaiclasses.com"),
   title: "Desai Classes Pune | Best JEE NEET MHT-CET Coaching | Karve Nagar Since 1990",
   description:
-    "Desai Classes – Top JEE, NEET & MHT-CET coaching in Karve Nagar, Pune. Expert faculty for 11th & 12th Science & Commerce since 1990. IIT Madras, IIT Indore selections. 99.9 percentile toppers. 4.8★ Google rating, 35+ years of excellence. Office No 231, Kakade Plaza, NDA Road.",
+    "Desai Classes – Top JEE, NEET & MHT-CET coaching in Karve Nagar, Pune. Expert faculty for 11th & 12th Science & Commerce since 1990. IIT Madras, IIT Indore selections. 99.9 percentile toppers. 4.9★ Google rating, 35+ years of excellence. Office No 231, Kakade Plaza, NDA Road.",
   keywords: [
     // High-volume (Google Keyword Planner)
     "neet classes in pune",
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Desai Classes Pune | Best JEE NEET MHT-CET Coaching | Karve Nagar Since 1990",
     description:
-      "Top JEE, NEET & MHT-CET coaching in Karve Nagar, Pune since 1990. IIT & NIT selections, 99.9 percentile toppers. 4.8★ Google rating, 35+ years of excellence.",
+      "Top JEE, NEET & MHT-CET coaching in Karve Nagar, Pune since 1990. IIT & NIT selections, 99.9 percentile toppers. 4.9★ Google rating, 35+ years of excellence.",
     url: "https://desaiclasses.com",
     siteName: "Desai Classes",
     locale: "en_IN",
@@ -93,7 +93,7 @@ export const metadata: Metadata = {
     creator: "@ClassesDes92890",
     title: "Desai Classes Pune | Best JEE NEET MHT-CET Coaching | Karve Nagar Since 1990",
     description:
-      "Top JEE, NEET & MHT-CET coaching in Pune since 1990. IIT selections, 99.9 percentile toppers. 4.8★ rated. Karve Nagar, Pune.",
+      "Top JEE, NEET & MHT-CET coaching in Pune since 1990. IIT selections, 99.9 percentile toppers. 4.9★ rated. Karve Nagar, Pune.",
   },
   robots: {
     index: true,

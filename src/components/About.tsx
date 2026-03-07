@@ -52,7 +52,7 @@ export default function About() {
 
             {/* Highlight pills */}
             <div className="mt-7 flex flex-wrap gap-2.5">
-              {["35+ Years Trust", "10,000+ Alumni", "IIT Rankers", "NEET/CET Toppers", "4.8★ Google Rated"].map(chip => (
+              {["35+ Years Trust", "10,000+ Alumni", "IIT Rankers", "NEET/CET Toppers", "4.9★ Google Rated"].map(chip => (
                 <span
                   key={chip}
                   className="text-sm font-semibold text-[#1E1B6B] bg-[#F0EFFF] border border-[#1E1B6B]/15 px-4 py-1.5 rounded-full"
@@ -152,7 +152,7 @@ export default function About() {
                 <div className="flex gap-0.5">
                   {[1,2,3,4,5].map(s => <span key={s} className="text-[#E8C547] text-sm">★</span>)}
                 </div>
-                <span className="text-[#190B62] font-extrabold text-sm">4.8</span>
+                <span className="text-[#190B62] font-extrabold text-sm">4.9</span>
                 <span className="text-[#6B69A0] text-xs">· 210+ Google Reviews</span>
               </div>
             </div>
